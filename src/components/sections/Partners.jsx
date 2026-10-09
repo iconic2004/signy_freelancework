@@ -2,170 +2,108 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
-import gsap from "gsap";
 import { PARTNER_LOGOS } from "@/lib/constants";
+import { gsap, ScrollTrigger } from "@/lib/motion";
 
 export default function Partners() {
   const containerRef = useRef(null);
+  const headingRef = useRef(null);
   const trackRef = useRef(null);
-  const itemsRef = useRef([]);
 
-  // Quadruple the logos so we have 40 nodes for an uninterrupted wide stream
+  // Triple logos for wide seamless horizontal stream
   const logos = [
-    ...PARTNER_LOGOS,
     ...PARTNER_LOGOS,
     ...PARTNER_LOGOS,
     ...PARTNER_LOGOS,
   ];
 
   useEffect(() => {
-    // Check for reduced motion preference
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-
-    if (prefersReducedMotion) return;
-
     const ctx = gsap.context(() => {
-      let animationFrameId;
-      let lastScrollY = window.scrollY;
-      let scrollVelocity = 0;
-      let smoothedVelocity = 0;
+      const mm = gsap.matchMedia();
 
-      // Base animation parameters
-      let offsetX = 0;
-      let currentSpeed = 1.2; // Base idle drift speed (px/frame)
-      const baseSpeed = 1.2;
-      let phase = 0;
+      mm.add(
+        {
+          reduceMotion: "(prefers-reduced-motion: reduce)",
+          standard: "(prefers-reduced-motion: no-preference)",
+        },
+        (context) => {
+          const { reduceMotion } = context.conditions;
 
-      // Dynamic viewport responsive values
-      let isMobile = window.innerWidth < 768;
-      let itemSpacing = isMobile ? 100 : 155;
-      let baseAmplitude = isMobile ? 22 : 45;
-      let currentAmplitude = baseAmplitude;
-      let frequency = isMobile ? 0.015 : 0.009;
-
-      const totalItems = logos.length;
-      const totalWidth = totalItems * itemSpacing;
-      const buffer = isMobile ? 120 : 200;
-
-      // Handle window resize dynamically
-      const handleResize = () => {
-        isMobile = window.innerWidth < 768;
-        itemSpacing = isMobile ? 100 : 155;
-        baseAmplitude = isMobile ? 22 : 45;
-        frequency = isMobile ? 0.015 : 0.009;
-      };
-      window.addEventListener("resize", handleResize);
-
-      // Scroll listener to compute scroll velocity
-      const handleScroll = () => {
-        const currentScrollY = window.scrollY;
-        const delta = currentScrollY - lastScrollY;
-        scrollVelocity = delta;
-        lastScrollY = currentScrollY;
-      };
-      window.addEventListener("scroll", handleScroll, { passive: true });
-
-      // Main 60fps Animation Loop
-      const render = () => {
-        // 1. Smooth scroll velocity (damped lerp)
-        smoothedVelocity += (scrollVelocity - smoothedVelocity) * 0.1;
-        // Decay raw scroll velocity if scroll stops
-        scrollVelocity *= 0.9;
-
-        // 2. Compute target horizontal speed:
-        // Scrolling DOWN (positive delta) pushes logos left (-x)
-        // Scrolling UP (negative delta) pushes logos right (+x)
-        const scrollInfluence = smoothedVelocity * -0.45;
-        const targetSpeed = baseSpeed + scrollInfluence;
-        currentSpeed += (targetSpeed - currentSpeed) * 0.08;
-
-        // 3. Update horizontal offset
-        offsetX += currentSpeed;
-
-        // 4. Compute dynamic wave amplitude based on velocity intensity
-        const extraAmp = Math.min(Math.abs(smoothedVelocity) * 0.6, 25);
-        const targetAmplitude = baseAmplitude + extraAmp;
-        currentAmplitude += (targetAmplitude - currentAmplitude) * 0.08;
-
-        // 5. Update wave phase (continuous organic motion)
-        phase += 0.018 + Math.abs(currentSpeed) * 0.003;
-
-        // 6. Update position for each circle element directly via translate3d
-        const containerWidth = containerRef.current
-          ? containerRef.current.offsetWidth
-          : 1200;
-
-        itemsRef.current.forEach((el, index) => {
-          if (!el) return;
-
-          // Compute raw horizontal position
-          const initialX = index * itemSpacing;
-          const rawX = initialX - offsetX;
-
-          // Modular recycling calculation (wrap seamlessly around screen)
-          let wrappedX =
-            (((rawX % totalWidth) + totalWidth) % totalWidth) - buffer;
-
-          // Hide elements that fall outside active render range to optimize GPU
-          if (wrappedX < -buffer || wrappedX > containerWidth + buffer) {
-            el.style.visibility = "hidden";
-          } else {
-            el.style.visibility = "visible";
+          if (reduceMotion) {
+            return;
           }
 
-          // Compute Y coordinate on continuous sine wave
-          const y = Math.sin(wrappedX * frequency + phase) * currentAmplitude;
+          // 1. Heading Scroll-Scrubbed Reveal
+          gsap.fromTo(
+            headingRef.current,
+            { opacity: 0, y: 20 },
+            {
+              opacity: 1,
+              y: 0,
+              ease: "none",
+              scrollTrigger: {
+                trigger: containerRef.current,
+                start: "top 90%",
+                end: "top 60%",
+                scrub: 1,
+                invalidateOnRefresh: true,
+              },
+            }
+          );
 
-          // Apply 3D hardware-accelerated transform
-          el.style.transform = `translate3d(${wrappedX}px, ${y}px, 0)`;
-        });
-
-        animationFrameId = requestAnimationFrame(render);
-      };
-
-      animationFrameId = requestAnimationFrame(render);
-
-      return () => {
-        cancelAnimationFrame(animationFrameId);
-        window.removeEventListener("scroll", handleScroll);
-        window.removeEventListener("resize", handleResize);
-      };
+          // 2. Logo Track Scroll-Scrubbed Horizontal Movement
+          // Scrolling down scrubs the track smoothly across the viewport; scrolling up reverses it
+          gsap.fromTo(
+            trackRef.current,
+            { x: 0 },
+            {
+              x: -360,
+              ease: "none",
+              scrollTrigger: {
+                trigger: containerRef.current,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 1.2,
+                invalidateOnRefresh: true,
+              },
+            }
+          );
+        }
+      );
     }, containerRef);
 
     return () => ctx.revert();
-  }, [logos.length]);
+  }, []);
 
   return (
     <section
       ref={containerRef}
-      className="py-16 md:py-24 bg-slate-50/70 border-y border-slate-200/80 relative overflow-hidden select-none"
+      className="py-14 md:py-20 bg-white border-y border-slate-100 relative overflow-hidden select-none"
     >
-      {/* Ambient Teal Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[380px] bg-[#4ABFAD]/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="bg-tech-grid absolute inset-0 opacity-15 pointer-events-none" />
-
-      {/* Section Header */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center relative z-10">
-        <p className="text-xs uppercase tracking-widest text-slate-500 font-bold font-sans">
-          Trusted by 400+ leading brands &amp; high-volume platforms
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center">
+        <p
+          ref={headingRef}
+          className="text-xs uppercase tracking-widest text-slate-500 font-bold will-change-transform"
+        >
+          Our trusted partners
         </p>
       </div>
 
-      {/* Wave Marquee Viewport with Edge Fade Gradient Masks */}
-      <div className="relative w-full h-[180px] sm:h-[220px] md:h-[260px] flex items-center overflow-hidden z-10">
-        {/* Left & Right Smooth Edge Fade Gradient Masks */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-48 bg-gradient-to-r from-slate-50 via-slate-50/80 to-transparent z-20 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-48 bg-gradient-to-l from-slate-50 via-slate-50/80 to-transparent z-20 pointer-events-none" />
+      {/* Scroll-Scrubbed Marquee Track Viewport */}
+      <div className="relative w-full overflow-hidden flex items-center py-2">
+        {/* Left & Right Smooth Edge Fade Masks */}
+        <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
 
-        {/* Absolute Canvas Track containing floating circular nodes */}
-        <div ref={trackRef} className="relative w-full h-full">
+        {/* Scroll-Scrubbed Canvas Track */}
+        <div
+          ref={trackRef}
+          className="flex items-center gap-6 sm:gap-8 will-change-transform pl-4"
+        >
           {logos.map((partner, index) => (
             <div
-              key={`wave-${partner.name}-${index}`}
-              ref={(el) => (itemsRef.current[index] = el)}
-              className="absolute left-0 top-1/2 -translate-y-1/2 w-18 h-18 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full bg-white border border-slate-200/80 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_35px_rgba(74,191,173,0.22)] hover:border-[#4ABFAD]/60 hover:scale-110 transition-all duration-300 flex items-center justify-center p-3.5 sm:p-5 group cursor-pointer will-change-transform"
+              key={`${partner.name}-${index}`}
+              className="flex-shrink-0 w-32 sm:w-36 h-16 sm:h-20 bg-slate-50/80 border border-slate-200/70 rounded-xl flex items-center justify-center p-3 hover:bg-white hover:border-[#4ABFAD]/60 hover:shadow-md transition-all duration-300 group"
               title={partner.name}
             >
               <div className="relative w-full h-full flex items-center justify-center">
@@ -173,7 +111,7 @@ export default function Partners() {
                   src={partner.src}
                   alt={partner.name}
                   fill
-                  className="object-contain p-1 sm:p-1.5 transition-transform duration-300 group-hover:scale-105"
+                  className="object-contain p-1 opacity-75 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
                 />
               </div>
             </div>

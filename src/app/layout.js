@@ -118,10 +118,6 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="min-h-screen flex flex-col bg-[#FAFBFC] text-[#0F172A] antialiased selection:bg-[#4ABFAD]/20 selection:text-[#1B2A4A]">
-        {/* Ambient Top Glow */}
-        <div className="gradient-blob-1 -top-40 left-1/2 -translate-x-1/2" />
-        <div className="gradient-blob-2 top-96 -right-60" />
-
         <Navbar />
         <main className="flex-1 relative z-10">{children}</main>
         <Footer />

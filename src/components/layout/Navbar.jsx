@@ -19,6 +19,8 @@ import {
 } from "lucide-react";
 import { NAV_LINKS, COMPANY_INFO } from "@/lib/constants";
 
+import MobileMenu from "@/components/layout/MobileMenu";
+
 const SERVICE_ICONS = {
   "/services/bulk-sms": MessageSquare,
   "/services/whatsapp-business-api": PhoneCall,
@@ -199,79 +201,23 @@ export default function Navbar() {
           {/* Mobile menu trigger */}
           <div className="flex md:hidden items-center gap-2">
             <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-slate-700 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
-              aria-label="Toggle navigation menu"
+              onClick={() => setMobileMenuOpen(true)}
+              className="p-2 text-slate-900 hover:text-[#4ABFAD] hover:bg-slate-100 rounded-lg transition-colors cursor-pointer"
+              aria-label="Open navigation menu"
+              aria-expanded={mobileMenuOpen}
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              <Menu className="w-6 h-6 stroke-[2]" />
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Menu Drawer */}
-      {mobileMenuOpen && (
-        <div className="md:hidden border-b border-slate-200 bg-white/95 backdrop-blur-xl px-4 pt-3 pb-6 animate-in slide-in-from-top-4">
-          <div className="flex flex-col gap-1">
-            <Link
-              href="/"
-              className={`px-3 py-2.5 rounded-lg text-base font-medium ${
-                pathname === "/" ? "bg-[#4ABFAD]/10 text-[#4ABFAD]" : "text-slate-800"
-              }`}
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className={`px-3 py-2.5 rounded-lg text-base font-medium ${
-                pathname === "/about" ? "bg-[#4ABFAD]/10 text-[#4ABFAD]" : "text-slate-800"
-              }`}
-            >
-              About
-            </Link>
-            <div className="py-2">
-              <div className="px-3 text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1">
-                Services
-              </div>
-              <div className="grid grid-cols-1 gap-1 pl-2">
-                {servicesLink?.dropdown?.map((subItem) => (
-                  <Link
-                    key={subItem.href}
-                    href={subItem.href}
-                    className="px-3 py-2 rounded-lg text-sm text-slate-700 hover:text-[#4ABFAD] hover:bg-slate-50 flex items-center justify-between"
-                  >
-                    <span>{subItem.label}</span>
-                    <ArrowRight className="w-3.5 h-3.5 text-slate-400" />
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <Link
-              href="/why-us"
-              className={`px-3 py-2.5 rounded-lg text-base font-medium ${
-                pathname === "/why-us" ? "bg-[#4ABFAD]/10 text-[#4ABFAD]" : "text-slate-800"
-              }`}
-            >
-              Why Us
-            </Link>
-            <div className="pt-4 mt-2 border-t border-slate-100 flex flex-col gap-3">
-              <a
-                href={COMPANY_INFO.phoneHref}
-                className="text-center text-sm font-medium text-slate-600"
-              >
-                Direct Call: {COMPANY_INFO.phone}
-              </a>
-              <Link
-                href="/contact"
-                className="btn-primary text-center justify-center py-3"
-              >
-                <span>Get in touch</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Full-screen Minimalist Mobile Menu */}
+      <MobileMenu
+        isOpen={mobileMenuOpen}
+        onClose={() => setMobileMenuOpen(false)}
+        pathname={pathname}
+      />
     </header>
   );
 }
