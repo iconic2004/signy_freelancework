@@ -7,12 +7,14 @@ import { ArrowRight } from "lucide-react";
 import { HERO_CONTENT } from "@/lib/constants";
 import { gsap, ScrollTrigger } from "@/lib/motion";
 import BookDemoModal from "@/components/modals/BookDemoModal";
+import InteractiveTexture from "@/components/layout/InteractiveTexture";
 
 export default function Hero() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
   const heroRef = useRef(null);
   const eyebrowRef = useRef(null);
-  const headlineRef = useRef(null);
+  const line1Ref = useRef(null);
+  const line2Ref = useRef(null);
   const copyRef = useRef(null);
   const actionsRef = useRef(null);
   const visualRef = useRef(null);
@@ -34,45 +36,70 @@ export default function Hero() {
             return;
           }
 
-          // Hero Scroll-Scrubbed Transition (scrub linked to page scroll from top)
-          const heroTimeline = gsap.timeline({
+          // 1. Initial Cinematic Line-Masked Entrance
+          const entranceTl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+          entranceTl
+            .fromTo(
+              eyebrowRef.current,
+              { opacity: 0, y: 15 },
+              { opacity: 1, y: 0, duration: 0.6 }
+            )
+            .fromTo(
+              [line1Ref.current, line2Ref.current],
+              { y: "110%", opacity: 0 },
+              { y: "0%", opacity: 1, duration: 0.85, stagger: 0.12 },
+              "-=0.4"
+            )
+            .fromTo(
+              [copyRef.current, actionsRef.current],
+              { opacity: 0, y: 20 },
+              { opacity: 1, y: 0, duration: 0.6, stagger: 0.1 },
+              "-=0.5"
+            )
+            .fromTo(
+              imgWrapperRef.current,
+              { opacity: 0, y: 30, scale: 0.96 },
+              { opacity: 1, y: 0, scale: 1, duration: 0.9, ease: "power2.out" },
+              "-=0.7"
+            );
+
+          // 2. Scroll-Scrubbed Transition (scrub linked directly to scroll progress)
+          const heroScrollTl = gsap.timeline({
             scrollTrigger: {
               trigger: heroRef.current,
               start: "top top",
               end: "bottom top",
-              scrub: 1,
+              scrub: 0.4,
               invalidateOnRefresh: true,
             },
           });
 
-          // Headline & Eyebrow subtle upward drift and gentle fade
-          heroTimeline.to(
-            [eyebrowRef.current, headlineRef.current],
+          heroScrollTl.to(
+            [eyebrowRef.current, line1Ref.current, line2Ref.current],
             {
               y: -35,
-              opacity: 0.65,
+              opacity: 0.5,
               ease: "none",
             },
             0
           );
 
-          // Copy column gentle drift
-          heroTimeline.to(
+          heroScrollTl.to(
             [copyRef.current, actionsRef.current],
             {
               y: -25,
-              opacity: 0.75,
+              opacity: 0.6,
               ease: "none",
             },
             0.05
           );
 
-          // Hero Image optical depth scrub (subtle positive parallax & scale settle)
           if (imgWrapperRef.current) {
-            heroTimeline.to(
+            heroScrollTl.to(
               imgWrapperRef.current,
               {
-                y: 50,
+                y: 45,
                 scale: 0.97,
                 boxShadow: "0 30px 60px -20px rgba(0, 0, 0, 0.12)",
                 ease: "none",
@@ -89,20 +116,34 @@ export default function Hero() {
 
   return (
     <>
-      <section ref={heroRef} className="signy-hero">
-        <div className="signy-hero-container">
+      <section ref={heroRef} className="signy-hero relative overflow-hidden select-none">
+        {/* Interactive Cursor-Following Texture — Hero Section Only (z-0) */}
+        <InteractiveTexture containerRef={heroRef} />
+
+        {/* Hero Content (z-10) */}
+        <div className="signy-hero-container relative z-10">
           {/* Eyebrow */}
-          <div ref={eyebrowRef} className="signy-hero-eyebrow">
+          <div ref={eyebrowRef} className="signy-hero-eyebrow will-change-transform">
             <span>{HERO_CONTENT.eyebrow}</span>
           </div>
 
-          {/* Headline */}
-          <h1 ref={headlineRef} className="signy-hero-title">
-            <span className="block">
-              Maximize reach, engagement,
+          {/* Masked Line-by-Line Typography Headline */}
+          <h1 className="signy-hero-title">
+            <span className="block overflow-hidden py-1">
+              <span
+                ref={line1Ref}
+                className="block will-change-transform"
+              >
+                Maximize reach, engagement,
+              </span>
             </span>
-            <span className="block text-slate-800">
-              and results with messaging campaigns.
+            <span className="block overflow-hidden py-1">
+              <span
+                ref={line2Ref}
+                className="block text-slate-800 will-change-transform"
+              >
+                and results with messaging campaigns.
+              </span>
             </span>
           </h1>
 
@@ -110,11 +151,11 @@ export default function Hero() {
           <div className="signy-hero-lower">
             {/* Left: Copy + CTAs */}
             <div className="signy-hero-copy-column">
-              <p ref={copyRef} className="signy-hero-copy">
+              <p ref={copyRef} className="signy-hero-copy will-change-transform">
                 {HERO_CONTENT.subheadline}
               </p>
 
-              <div ref={actionsRef} className="signy-hero-actions">
+              <div ref={actionsRef} className="signy-hero-actions will-change-transform">
                 <Link
                   href={HERO_CONTENT.cta1.href}
                   className="signy-hero-button signy-hero-button-secondary"
@@ -134,7 +175,7 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Right: Actual Hero Image */}
+            {/* Right: Hero Image */}
             <div ref={visualRef} className="signy-hero-visual">
               <div ref={imgWrapperRef} className="signy-hero-image-wrapper will-change-transform">
                 <Image

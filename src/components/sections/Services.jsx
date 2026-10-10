@@ -25,7 +25,9 @@ const ICON_MAP = {
 
 export default function Services() {
   const sectionRef = useRef(null);
-  const headerRef = useRef(null);
+  const eyebrowRef = useRef(null);
+  const titleRef = useRef(null);
+  const descRef = useRef(null);
   const gridRef = useRef(null);
   const cardsRef = useRef([]);
 
@@ -45,31 +47,29 @@ export default function Services() {
             return;
           }
 
-          // 1. Header Scroll-Scrubbed Reveal
-          if (headerRef.current?.children) {
-            gsap.fromTo(
-              headerRef.current.children,
-              { opacity: 0, y: 30 },
-              {
-                opacity: 1,
-                y: 0,
-                stagger: 0.08,
-                ease: "none",
-                scrollTrigger: {
-                  trigger: sectionRef.current,
-                  start: "top 85%",
-                  end: "top 50%",
-                  scrub: 1,
-                  invalidateOnRefresh: true,
-                },
-              }
-            );
-          }
+          // 1. Masked Line Typography Scroll-Scrubbed Reveal
+          gsap.fromTo(
+            [eyebrowRef.current, titleRef.current, descRef.current],
+            { y: "100%", opacity: 0 },
+            {
+              y: "0%",
+              opacity: 1,
+              stagger: 0.1,
+              ease: "none",
+              scrollTrigger: {
+                trigger: sectionRef.current,
+                start: "top 85%",
+                end: "top 55%",
+                scrub: 0.4,
+                invalidateOnRefresh: true,
+              },
+            }
+          );
 
-          // 2. 6 Service Cards Staggered Scroll-Scrubbed Entrance
+          // 2. Service Cards Staggered Entrance
           gsap.fromTo(
             cardsRef.current,
-            { opacity: 0, y: 45, scale: 0.97 },
+            { opacity: 0, y: 35, scale: 0.98 },
             {
               opacity: 1,
               y: 0,
@@ -79,8 +79,8 @@ export default function Services() {
               scrollTrigger: {
                 trigger: gridRef.current,
                 start: "top 85%",
-                end: "top 35%",
-                scrub: 1.2,
+                end: "top 40%",
+                scrub: 0.4,
                 invalidateOnRefresh: true,
               },
             }
@@ -96,23 +96,37 @@ export default function Services() {
     <section
       id="services"
       ref={sectionRef}
-      className="py-20 md:py-28 bg-white border-t border-slate-100 relative"
+      className="py-20 md:py-28 bg-white border-t border-slate-100 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div
-          ref={headerRef}
-          className="text-center max-w-3xl mx-auto mb-16 space-y-3"
-        >
-          <p className="text-xs uppercase tracking-widest text-[#4ABFAD] font-bold will-change-transform">
-            Our Services
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight will-change-transform">
-            What we are offering
-          </h2>
-          <p className="text-slate-600 text-base max-w-2xl mx-auto will-change-transform">
-            Comprehensive messaging and communication solutions tailored to grow your business and streamline customer engagement.
-          </p>
+        {/* Section Header with Masked Line Typography */}
+        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <div className="overflow-hidden py-1">
+            <p
+              ref={eyebrowRef}
+              className="text-xs uppercase tracking-widest text-[#36BEA4] font-bold will-change-transform"
+            >
+              Our Services
+            </p>
+          </div>
+
+          <div className="overflow-hidden py-1">
+            <h2
+              ref={titleRef}
+              className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight will-change-transform"
+            >
+              What we are offering
+            </h2>
+          </div>
+
+          <div className="overflow-hidden py-1">
+            <p
+              ref={descRef}
+              className="text-slate-600 text-base max-w-2xl mx-auto will-change-transform"
+            >
+              Comprehensive messaging and communication solutions tailored to grow your business and streamline customer engagement.
+            </p>
+          </div>
         </div>
 
         {/* 6 Clean Service Cards Grid */}
@@ -127,16 +141,16 @@ export default function Services() {
               <div
                 key={service.id}
                 ref={(el) => (cardsRef.current[index] = el)}
-                className="group relative rounded-2xl p-8 bg-slate-50/70 border border-slate-200/80 hover:border-[#4ABFAD]/60 hover:bg-white hover:shadow-xl hover:shadow-[#4ABFAD]/5 transition-all duration-300 flex flex-col justify-between will-change-transform"
+                className="group relative rounded-2xl p-8 bg-slate-50/70 border border-slate-200/80 hover:border-[#36BEA4]/60 hover:bg-white hover:shadow-xl hover:shadow-[#36BEA4]/5 transition-all duration-300 flex flex-col justify-between will-change-transform"
               >
                 <div>
                   {/* Icon */}
-                  <div className="w-12 h-12 rounded-xl bg-[#4ABFAD]/10 text-[#4ABFAD] flex items-center justify-center mb-6 group-hover:bg-[#4ABFAD] group-hover:text-white group-hover:scale-105 transition-all duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-[#36BEA4]/10 text-[#36BEA4] flex items-center justify-center mb-6 group-hover:bg-[#36BEA4] group-hover:text-white group-hover:scale-105 transition-all duration-300">
                     <Icon className="w-6 h-6" />
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#4ABFAD] transition-colors">
+                  <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#36BEA4] transition-colors">
                     {service.title}
                   </h3>
 
@@ -150,7 +164,7 @@ export default function Services() {
                 <div className="pt-4 border-t border-slate-200/60">
                   <Link
                     href={service.href}
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-slate-900 group-hover:text-[#4ABFAD] transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-slate-900 group-hover:text-[#36BEA4] transition-colors"
                   >
                     <span>Learn More</span>
                     <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1.5" />
@@ -165,7 +179,7 @@ export default function Services() {
         <div className="mt-14 text-center">
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-slate-700 hover:text-[#4ABFAD] transition-colors group"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-slate-700 hover:text-[#36BEA4] transition-colors group"
           >
             <span>View all service details</span>
             <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />

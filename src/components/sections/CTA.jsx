@@ -9,7 +9,9 @@ import { gsap, ScrollTrigger } from "@/lib/motion";
 export default function CTA() {
   const containerRef = useRef(null);
   const cardRef = useRef(null);
-  const contentRef = useRef(null);
+  const titleRef = useRef(null);
+  const descRef = useRef(null);
+  const buttonRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -30,7 +32,7 @@ export default function CTA() {
           // 1. CTA Card Container Scroll-Scrubbed Expansion
           gsap.fromTo(
             cardRef.current,
-            { opacity: 0.35, scale: 0.95, y: 30 },
+            { opacity: 0.4, scale: 0.96, y: 30 },
             {
               opacity: 1,
               scale: 1,
@@ -39,33 +41,31 @@ export default function CTA() {
               scrollTrigger: {
                 trigger: containerRef.current,
                 start: "top 90%",
-                end: "top 40%",
-                scrub: 1.2,
+                end: "top 45%",
+                scrub: 0.4,
                 invalidateOnRefresh: true,
               },
             }
           );
 
-          // 2. Content Staggered Scroll-Scrubbed Reveal
-          if (contentRef.current?.children) {
-            gsap.fromTo(
-              contentRef.current.children,
-              { opacity: 0, y: 25 },
-              {
-                opacity: 1,
-                y: 0,
-                stagger: 0.08,
-                ease: "none",
-                scrollTrigger: {
-                  trigger: containerRef.current,
-                  start: "top 85%",
-                  end: "top 45%",
-                  scrub: 1,
-                  invalidateOnRefresh: true,
-                },
-              }
-            );
-          }
+          // 2. Masked Line Typography Reveal
+          gsap.fromTo(
+            [titleRef.current, descRef.current, buttonRef.current],
+            { y: "100%", opacity: 0 },
+            {
+              y: "0%",
+              opacity: 1,
+              stagger: 0.1,
+              ease: "none",
+              scrollTrigger: {
+                trigger: containerRef.current,
+                start: "top 85%",
+                end: "top 50%",
+                scrub: 0.4,
+                invalidateOnRefresh: true,
+              },
+            }
+          );
         }
       );
     }, containerRef);
@@ -83,29 +83,38 @@ export default function CTA() {
           ref={cardRef}
           className="relative rounded-3xl bg-slate-900 p-8 sm:p-14 md:p-16 text-center text-white overflow-hidden shadow-2xl will-change-transform"
         >
-          {/* Subtle top accent bar */}
-          <div className="absolute top-0 left-0 right-0 h-1 bg-[#4ABFAD]" />
+          {/* Top brand accent bar */}
+          <div className="absolute top-0 left-0 right-0 h-1 bg-[#36BEA4]" />
 
-          <div
-            ref={contentRef}
-            className="max-w-3xl mx-auto space-y-6 relative z-10"
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight will-change-transform">
-              {CTA_CONTENT.headline}
-            </h2>
-
-            <p className="text-slate-300 text-base sm:text-lg max-w-xl mx-auto leading-relaxed will-change-transform">
-              Reach your audience directly and scale your communications with tailored bulk messaging, WhatsApp, and voice solutions.
-            </p>
-
-            <div className="pt-4 flex items-center justify-center will-change-transform">
-              <Link
-                href={CTA_CONTENT.buttonHref}
-                className="btn-primary text-base px-8 py-4 shadow-xl hover:scale-105 transition-all duration-200 group"
+          <div className="max-w-3xl mx-auto space-y-6 relative z-10">
+            <div className="overflow-hidden py-1">
+              <h2
+                ref={titleRef}
+                className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight will-change-transform"
               >
-                <span>{CTA_CONTENT.buttonLabel}</span>
-                <ArrowRight className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" />
-              </Link>
+                {CTA_CONTENT.headline}
+              </h2>
+            </div>
+
+            <div className="overflow-hidden py-1">
+              <p
+                ref={descRef}
+                className="text-slate-300 text-base sm:text-lg max-w-xl mx-auto leading-relaxed will-change-transform"
+              >
+                Reach your audience directly and scale your communications with tailored bulk messaging, WhatsApp, and voice solutions.
+              </p>
+            </div>
+
+            <div className="overflow-hidden py-2 flex items-center justify-center">
+              <div ref={buttonRef} className="will-change-transform">
+                <Link
+                  href={CTA_CONTENT.buttonHref}
+                  className="btn-primary text-base px-8 py-4 shadow-xl hover:scale-105 transition-all duration-200 group inline-flex items-center gap-2"
+                >
+                  <span>{CTA_CONTENT.buttonLabel}</span>
+                  <ArrowRight className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>

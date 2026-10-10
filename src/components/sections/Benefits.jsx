@@ -10,7 +10,9 @@ const BENEFIT_ICONS = [TrendingDown, Headphones, Settings];
 export default function Benefits() {
   const [activeSlide, setActiveSlide] = useState(0);
   const sectionRef = useRef(null);
-  const headerRef = useRef(null);
+  const eyebrowRef = useRef(null);
+  const titleRef = useRef(null);
+  const descRef = useRef(null);
   const pillarGridRef = useRef(null);
   const showcaseRef = useRef(null);
   const showcaseContentRef = useRef(null);
@@ -57,32 +59,30 @@ export default function Benefits() {
             return;
           }
 
-          // 1. Header Scroll-Scrubbed Reveal
-          if (headerRef.current?.children) {
-            gsap.fromTo(
-              headerRef.current.children,
-              { opacity: 0, y: 30 },
-              {
-                opacity: 1,
-                y: 0,
-                stagger: 0.08,
-                ease: "none",
-                scrollTrigger: {
-                  trigger: sectionRef.current,
-                  start: "top 85%",
-                  end: "top 50%",
-                  scrub: 1,
-                  invalidateOnRefresh: true,
-                },
-              }
-            );
-          }
+          // 1. Masked Line Typography Reveal
+          gsap.fromTo(
+            [eyebrowRef.current, titleRef.current, descRef.current],
+            { y: "100%", opacity: 0 },
+            {
+              y: "0%",
+              opacity: 1,
+              stagger: 0.1,
+              ease: "none",
+              scrollTrigger: {
+                trigger: sectionRef.current,
+                start: "top 85%",
+                end: "top 55%",
+                scrub: 0.4,
+                invalidateOnRefresh: true,
+              },
+            }
+          );
 
           // 2. Pillars Grid Scroll-Scrubbed Reveal
           if (pillarGridRef.current?.children) {
             gsap.fromTo(
               pillarGridRef.current.children,
-              { opacity: 0, y: 40, scale: 0.98 },
+              { opacity: 0, y: 35, scale: 0.98 },
               {
                 opacity: 1,
                 y: 0,
@@ -93,7 +93,7 @@ export default function Benefits() {
                   trigger: pillarGridRef.current,
                   start: "top 85%",
                   end: "top 45%",
-                  scrub: 1.1,
+                  scrub: 0.4,
                   invalidateOnRefresh: true,
                 },
               }
@@ -104,7 +104,7 @@ export default function Benefits() {
           if (showcaseRef.current) {
             gsap.fromTo(
               showcaseRef.current,
-              { opacity: 0.4, y: 35, scale: 0.98 },
+              { opacity: 0.4, y: 30, scale: 0.98 },
               {
                 opacity: 1,
                 y: 0,
@@ -114,7 +114,7 @@ export default function Benefits() {
                   trigger: showcaseRef.current,
                   start: "top 85%",
                   end: "top 50%",
-                  scrub: 1,
+                  scrub: 0.4,
                   invalidateOnRefresh: true,
                 },
               }
@@ -136,20 +136,34 @@ export default function Benefits() {
       className="py-20 md:py-28 bg-slate-50 border-t border-slate-200/70 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div
-          ref={headerRef}
-          className="text-center max-w-3xl mx-auto mb-14 space-y-3"
-        >
-          <p className="text-xs uppercase tracking-widest text-[#4ABFAD] font-bold will-change-transform">
-            The Signy Advantage
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight will-change-transform">
-            Why should you choose us?
-          </h2>
-          <p className="text-slate-600 text-base max-w-2xl mx-auto will-change-transform">
-            Discover why hundreds of organizations rely on our dependable communication infrastructure and expert team.
-          </p>
+        {/* Section Header with Masked Line Typography */}
+        <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
+          <div className="overflow-hidden py-1">
+            <p
+              ref={eyebrowRef}
+              className="text-xs uppercase tracking-widest text-[#36BEA4] font-bold will-change-transform"
+            >
+              The Signy Advantage
+            </p>
+          </div>
+
+          <div className="overflow-hidden py-1">
+            <h2
+              ref={titleRef}
+              className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight will-change-transform"
+            >
+              Why should you choose us?
+            </h2>
+          </div>
+
+          <div className="overflow-hidden py-1">
+            <p
+              ref={descRef}
+              className="text-slate-600 text-base max-w-2xl mx-auto will-change-transform"
+            >
+              Discover why hundreds of organizations rely on our dependable communication infrastructure and expert team.
+            </p>
+          </div>
         </div>
 
         {/* Benefits Pillar Cards Navigation */}
@@ -167,7 +181,7 @@ export default function Benefits() {
                 onClick={() => setActiveSlide(index)}
                 className={`text-left p-6 sm:p-8 rounded-2xl border transition-all duration-300 flex flex-col justify-between cursor-pointer will-change-transform ${
                   isActive
-                    ? "bg-white border-[#4ABFAD] shadow-xl shadow-[#4ABFAD]/10 scale-[1.02]"
+                    ? "bg-white border-[#36BEA4] shadow-xl shadow-[#36BEA4]/10 scale-[1.02]"
                     : "bg-white/70 border-slate-200 hover:border-slate-300 hover:bg-white text-slate-700"
                 }`}
               >
@@ -176,7 +190,7 @@ export default function Benefits() {
                     <div
                       className={`w-12 h-12 rounded-xl flex items-center justify-center transition-colors duration-300 ${
                         isActive
-                          ? "bg-[#4ABFAD] text-white"
+                          ? "bg-[#36BEA4] text-white"
                           : "bg-slate-100 text-slate-600"
                       }`}
                     >
@@ -201,11 +215,11 @@ export default function Benefits() {
                 </div>
 
                 <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold">
-                  <span className={isActive ? "text-[#4ABFAD]" : "text-slate-400"}>
+                  <span className={isActive ? "text-[#36BEA4]" : "text-slate-400"}>
                     {isActive ? "Active View" : "Click to view"}
                   </span>
                   {isActive && (
-                    <span className="w-2 h-2 rounded-full bg-[#4ABFAD]" />
+                    <span className="w-2 h-2 rounded-full bg-[#36BEA4]" />
                   )}
                 </div>
               </button>
@@ -219,7 +233,7 @@ export default function Benefits() {
           className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-lg relative overflow-hidden will-change-transform"
         >
           <div ref={showcaseContentRef} className="max-w-3xl space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#4ABFAD]/10 text-[#4ABFAD] text-xs font-bold">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#36BEA4]/10 text-[#36BEA4] text-xs font-bold">
               <Icon className="w-4 h-4" />
               <span>Pillar {activeSlide + 1} of {BENEFITS.length}</span>
             </div>

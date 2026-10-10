@@ -9,7 +9,9 @@ export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(1);
   const sectionRef = useRef(null);
-  const headerRef = useRef(null);
+  const eyebrowRef = useRef(null);
+  const titleRef = useRef(null);
+  const descRef = useRef(null);
   const featuredCardRef = useRef(null);
   const cardBodyRef = useRef(null);
   const quickSelectRef = useRef(null);
@@ -62,32 +64,30 @@ export default function Testimonials() {
             return;
           }
 
-          // 1. Header Scroll-Scrubbed Reveal
-          if (headerRef.current?.children) {
-            gsap.fromTo(
-              headerRef.current.children,
-              { opacity: 0, y: 30 },
-              {
-                opacity: 1,
-                y: 0,
-                stagger: 0.08,
-                ease: "none",
-                scrollTrigger: {
-                  trigger: sectionRef.current,
-                  start: "top 85%",
-                  end: "top 50%",
-                  scrub: 1,
-                  invalidateOnRefresh: true,
-                },
-              }
-            );
-          }
+          // 1. Masked Line Typography Reveal
+          gsap.fromTo(
+            [eyebrowRef.current, titleRef.current, descRef.current],
+            { y: "100%", opacity: 0 },
+            {
+              y: "0%",
+              opacity: 1,
+              stagger: 0.1,
+              ease: "none",
+              scrollTrigger: {
+                trigger: sectionRef.current,
+                start: "top 85%",
+                end: "top 55%",
+                scrub: 0.4,
+                invalidateOnRefresh: true,
+              },
+            }
+          );
 
           // 2. Featured Testimonial Card Scroll-Scrubbed Settle
           if (featuredCardRef.current) {
             gsap.fromTo(
               featuredCardRef.current,
-              { opacity: 0.3, y: 40, scale: 0.98 },
+              { opacity: 0.4, y: 35, scale: 0.98 },
               {
                 opacity: 1,
                 y: 0,
@@ -97,7 +97,7 @@ export default function Testimonials() {
                   trigger: featuredCardRef.current,
                   start: "top 85%",
                   end: "top 45%",
-                  scrub: 1.1,
+                  scrub: 0.4,
                   invalidateOnRefresh: true,
                 },
               }
@@ -118,7 +118,7 @@ export default function Testimonials() {
                   trigger: quickSelectRef.current,
                   start: "top 88%",
                   end: "top 55%",
-                  scrub: 1,
+                  scrub: 0.4,
                   invalidateOnRefresh: true,
                 },
               }
@@ -139,20 +139,34 @@ export default function Testimonials() {
       className="py-20 md:py-28 bg-slate-50 border-t border-slate-200/70 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div
-          ref={headerRef}
-          className="text-center max-w-3xl mx-auto mb-16 space-y-3"
-        >
-          <p className="text-xs uppercase tracking-widest text-[#4ABFAD] font-bold will-change-transform">
-            Feedback &amp; Reviews
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight will-change-transform">
-            Client&apos;s Testimonials
-          </h2>
-          <p className="text-slate-600 text-base max-w-2xl mx-auto will-change-transform">
-            What our clients have to say about partnering with Signy for their business messaging needs.
-          </p>
+        {/* Header with Masked Line Typography */}
+        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <div className="overflow-hidden py-1">
+            <p
+              ref={eyebrowRef}
+              className="text-xs uppercase tracking-widest text-[#36BEA4] font-bold will-change-transform"
+            >
+              Feedback &amp; Reviews
+            </p>
+          </div>
+
+          <div className="overflow-hidden py-1">
+            <h2
+              ref={titleRef}
+              className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight will-change-transform"
+            >
+              Client&apos;s Testimonials
+            </h2>
+          </div>
+
+          <div className="overflow-hidden py-1">
+            <p
+              ref={descRef}
+              className="text-slate-600 text-base max-w-2xl mx-auto will-change-transform"
+            >
+              What our clients have to say about partnering with Signy for their business messaging needs.
+            </p>
+          </div>
         </div>
 
         {/* Featured Testimonial Card */}
@@ -229,7 +243,7 @@ export default function Testimonials() {
               onClick={() => selectTestimonial(index)}
               className={`text-left p-4 rounded-xl border transition-all duration-200 cursor-pointer will-change-transform ${
                 currentIndex === index
-                  ? "bg-white border-[#4ABFAD] shadow-md shadow-[#4ABFAD]/10 scale-[1.02]"
+                  ? "bg-white border-[#36BEA4] shadow-md shadow-[#36BEA4]/10 scale-[1.02]"
                   : "bg-white/60 hover:bg-white border-slate-200 text-slate-600"
               }`}
             >
