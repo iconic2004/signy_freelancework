@@ -23,10 +23,10 @@ export const NAV_LINKS = [
     href: "/services",
     dropdown: [
       { label: "Bulk SMS", href: "/services/bulk-sms", desc: "Automated bulk messaging" },
-      { label: "WhatsApp Business API", href: "/services/whatsapp-business-api", desc: "Official WhatsApp business messaging" },
+      { label: "WhatsApp Business API", href: "/services/whatsapp-business-api", desc: "Official WhatsApp business messaging", logoSrc: "/images/whatsapp-business-api.png" },
       { label: "Voice Calls", href: "/services/voice-calls", desc: "Clear, reliable voice broadcast" },
-      { label: "Google Verified SMS", href: "/services/google-verified-sms", desc: "Verified sender identity & logo" },
-      { label: "RCS Messaging", href: "/services/rcs", desc: "Rich interactive multimedia chat" },
+      { label: "Google Verified SMS", href: "/services/google-verified-sms", desc: "Verified sender identity & logo", logoSrc: "/images/google-verified-sms.png" },
+      { label: "RCS Messaging", href: "/services/rcs", desc: "Rich interactive multimedia chat", logoSrc: "/images/rcs-messaging.png" },
       { label: "Chatbots", href: "/services/chatbots", desc: "24/7 intelligent customer support" },
     ]
   },
@@ -54,7 +54,7 @@ export const SERVICES = [
     title: "WhatsApp Business API",
     desc: "Manage customer conversations effortlessly with the WhatsApp Business API. Automate replies, send notifications, and boost sales from one unified WhatsApp platform.",
     href: "/services/whatsapp-business-api",
-    iconName: "PhoneCall",
+    logoSrc: "/images/whatsapp-business-api.png",
   },
   {
     id: "voice-calls",
@@ -68,14 +68,14 @@ export const SERVICES = [
     title: "Google Verified SMS",
     desc: "Build Trust with Every Message. Elevate your brand's credibility by displaying your verified business name and logo directly in the text thread. Through Google's verification program, we ensure your communications are instantly recognized and trusted by customers.",
     href: "/services/google-verified-sms",
-    iconName: "ShieldCheck",
+    logoSrc: "/images/google-verified-sms.png",
   },
   {
     id: "rcs",
     title: "RCS (Rich Communication Services)",
     desc: "Transform Conversations with Rich Media. Move beyond basic SMS and engage your audience with dynamic, interactive messaging. Send high-resolution images, videos, audio files, and more through RCS, creating visually rich and compelling conversations that drive engagement.",
     href: "/services/rcs",
-    iconName: "Sparkles",
+    logoSrc: "/images/rcs-messaging.png",
   },
   {
     id: "chatbots",

@@ -23,7 +23,15 @@ export default function RcsPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 space-y-6">
             <span className="badge-teal">
-              <Sparkles className="w-3.5 h-3.5 text-[#4ABFAD]" />
+              <span className="w-4 h-4 relative shrink-0 inline-flex items-center justify-center">
+                <Image
+                  src="/images/rcs-messaging.png"
+                  alt=""
+                  width={16}
+                  height={16}
+                  className="object-contain"
+                />
+              </span>
               <span>Next-Gen Mobile Messaging Protocol</span>
             </span>
 

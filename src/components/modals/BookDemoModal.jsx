@@ -3,7 +3,8 @@
 import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
-import { X, Send, CheckCircle2, MessageCircle, AlertCircle } from "lucide-react";
+import Image from "next/image";
+import { X, Send, CheckCircle2, AlertCircle } from "lucide-react";
 import { gsap, MOTION_EASE } from "@/lib/motion";
 
 const COUNTRY_CODES = [
@@ -268,7 +269,15 @@ Privacy Consent: Yes`;
                 rel="noopener noreferrer"
                 className="btn-primary w-full sm:w-auto text-sm justify-center py-3"
               >
-                <MessageCircle className="w-4 h-4" />
+                <span className="w-4 h-4 relative shrink-0 inline-flex items-center justify-center">
+                  <Image
+                    src="/images/whatsapp-business-api.png"
+                    alt=""
+                    width={17}
+                    height={17}
+                    className="object-contain"
+                  />
+                </span>
                 <span>Open WhatsApp Again</span>
               </a>
 

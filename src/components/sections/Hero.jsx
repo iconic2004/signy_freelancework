@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 import { HERO_CONTENT } from "@/lib/constants";
 import { gsap, ScrollTrigger } from "@/lib/motion";
 import BookDemoModal from "@/components/modals/BookDemoModal";
-import InteractiveTexture from "@/components/layout/InteractiveTexture";
+import InteractiveIconTrail from "@/components/layout/InteractiveIconTrail";
 
 export default function Hero() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
@@ -117,8 +117,8 @@ export default function Hero() {
   return (
     <>
       <section ref={heroRef} className="signy-hero relative overflow-hidden select-none">
-        {/* Interactive Cursor-Following Texture — Hero Section Only (z-0) */}
-        <InteractiveTexture containerRef={heroRef} />
+        {/* Interactive Cursor-Following Icon Trail — Hero Section Only (z-0) */}
+        <InteractiveIconTrail containerRef={heroRef} />
 
         {/* Hero Content (z-10) */}
         <div className="signy-hero-container relative z-10">

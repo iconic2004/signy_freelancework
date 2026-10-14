@@ -2,11 +2,10 @@
 
 import { useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { 
   MessageSquare, 
-  PhoneCall, 
   Volume2, 
-  ShieldCheck, 
   Sparkles, 
   Bot, 
   ArrowRight 
@@ -16,9 +15,7 @@ import { gsap, ScrollTrigger } from "@/lib/motion";
 
 const ICON_MAP = {
   MessageSquare,
-  PhoneCall,
   Volume2,
-  ShieldCheck,
   Sparkles,
   Bot
 };
@@ -144,10 +141,23 @@ export default function Services() {
                 className="group relative rounded-2xl p-8 bg-slate-50/70 border border-slate-200/80 hover:border-[#36BEA4]/60 hover:bg-white hover:shadow-xl hover:shadow-[#36BEA4]/5 transition-all duration-300 flex flex-col justify-between will-change-transform"
               >
                 <div>
-                  {/* Icon */}
-                  <div className="w-12 h-12 rounded-xl bg-[#36BEA4]/10 text-[#36BEA4] flex items-center justify-center mb-6 group-hover:bg-[#36BEA4] group-hover:text-white group-hover:scale-105 transition-all duration-300">
-                    <Icon className="w-6 h-6" />
-                  </div>
+                  {/* Icon / Authentic PNG Brand Logo */}
+                  {service.logoSrc ? (
+                    <div className="w-12 h-12 rounded-xl bg-[#36BEA4]/10 border border-[#36BEA4]/20 flex items-center justify-center mb-6 group-hover:bg-[#36BEA4]/20 group-hover:scale-105 transition-all duration-300 p-2.5 overflow-hidden">
+                      <div className="relative w-7 h-7">
+                        <Image
+                          src={service.logoSrc}
+                          alt={service.title}
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="w-12 h-12 rounded-xl bg-[#36BEA4]/10 text-[#36BEA4] flex items-center justify-center mb-6 group-hover:bg-[#36BEA4] group-hover:text-white group-hover:scale-105 transition-all duration-300">
+                      <Icon className="w-6 h-6" />
+                    </div>
+                  )}
 
                   {/* Title */}
                   <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#36BEA4] transition-colors">

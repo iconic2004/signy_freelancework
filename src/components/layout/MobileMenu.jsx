@@ -266,7 +266,20 @@ export default function MobileMenu({ isOpen, onClose, pathname }) {
                     onClick={handleClose}
                     className="flex items-center justify-between text-sm sm:text-base font-light text-black/70 hover:text-[#4ABFAD] py-1.5 transition-colors group"
                   >
-                    <span>{sub.label}</span>
+                    <span className="flex items-center gap-2.5">
+                      {sub.logoSrc && (
+                        <span className="w-5 h-5 relative shrink-0 inline-flex items-center justify-center">
+                          <Image
+                            src={sub.logoSrc}
+                            alt=""
+                            width={18}
+                            height={18}
+                            className="object-contain"
+                          />
+                        </span>
+                      )}
+                      <span>{sub.label}</span>
+                    </span>
                     <ArrowUpRight className="w-4 h-4 stroke-[1.25] opacity-40 group-hover:opacity-100 group-hover:text-[#4ABFAD] transition-opacity" />
                   </Link>
                 ))}

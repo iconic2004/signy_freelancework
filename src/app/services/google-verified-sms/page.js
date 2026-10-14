@@ -23,7 +23,15 @@ export default function GoogleVerifiedSmsPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 space-y-6">
             <span className="badge-teal">
-              <Sparkles className="w-3.5 h-3.5 text-[#4ABFAD]" />
+              <span className="w-4 h-4 relative shrink-0 inline-flex items-center justify-center">
+                <Image
+                  src="/images/google-verified-sms.png"
+                  alt=""
+                  width={15}
+                  height={15}
+                  className="object-contain"
+                />
+              </span>
               <span>Official Google Verification Partner</span>
             </span>
 
@@ -78,7 +86,20 @@ export default function GoogleVerifiedSmsPage() {
               <span className="text-xs font-bold text-[#3B82F6] bg-[#3B82F6]/10 px-2.5 py-1 rounded-full">
                 {step.step}
               </span>
-              <h3 className="text-lg font-bold text-slate-900">{step.title}</h3>
+              <div className="flex items-center gap-2">
+                <h3 className="text-lg font-bold text-slate-900">{step.title}</h3>
+                {step.step === "Step 2" && (
+                  <span className="w-5 h-5 relative shrink-0 inline-flex items-center justify-center">
+                    <Image
+                      src="/images/google-verified-sms.png"
+                      alt="Google Verified SMS badge"
+                      width={18}
+                      height={18}
+                      className="object-contain"
+                    />
+                  </span>
+                )}
+              </div>
               <p className="text-xs text-slate-600 leading-relaxed">{step.desc}</p>
             </div>
           ))}
