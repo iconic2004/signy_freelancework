@@ -227,7 +227,7 @@ Privacy Consent: Yes`;
             </span>
             <h2
               id="book-demo-title"
-              className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mt-1"
+              className="signy-subsection-heading mt-1"
             >
               Book a Demo
             </h2>

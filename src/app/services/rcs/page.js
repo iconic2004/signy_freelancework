@@ -35,7 +35,7 @@ export default function RcsPage() {
               <span>Next-Gen Mobile Messaging Protocol</span>
             </span>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            <h1 className="signy-page-title">
               Transform Your Business with <span className="text-[#EC4899]">RCS</span> – The Next Generation of Messaging
             </h1>
 
@@ -52,13 +52,14 @@ export default function RcsPage() {
           </div>
 
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-md h-80 bg-white/70 rounded-3xl border border-slate-200 p-6 shadow-xl backdrop-blur-md flex items-center justify-center">
+            <div className="relative w-full max-w-md h-80 sm:h-96 bg-white/70 rounded-3xl border border-slate-200 p-6 shadow-xl backdrop-blur-md flex items-center justify-center">
               <Image
-                src="/images/RCS-Messaging_v2.svg"
-                alt="RCS Messaging"
+                src="/images/rcs-messaging-hero-ui.svg"
+                alt="RCS Next-Gen Rich Interactive Messaging UI"
                 fill
                 priority
-                className="object-contain p-4"
+                sizes="(max-width: 768px) 100vw, 450px"
+                className="object-contain p-2"
               />
             </div>
           </div>
@@ -69,7 +70,7 @@ export default function RcsPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-200/80 mb-20">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
           <span className="badge-teal">Core Capabilities</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
+          <h2 className="signy-section-heading">
             Why Choose Signy for RCS?
           </h2>
           <p className="text-slate-600 text-base">
@@ -86,7 +87,7 @@ export default function RcsPage() {
               <span className="text-xs font-bold text-[#EC4899] bg-[#EC4899]/10 px-2.5 py-1 rounded-full">
                 {item.step}
               </span>
-              <h3 className="text-lg font-bold text-slate-900">{item.title}</h3>
+              <h3 className="signy-card-heading">{item.title}</h3>
               <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>
             </div>
           ))}
@@ -97,19 +98,20 @@ export default function RcsPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 flex justify-center">
-            <div className="relative w-full max-w-md h-80 bg-white rounded-3xl border border-slate-200 p-6 shadow-xl flex items-center justify-center">
+            <div className="relative w-full max-w-md h-80 sm:h-96 bg-white rounded-3xl border border-slate-200 p-6 shadow-xl flex items-center justify-center">
               <Image
-                src="/images/whyRCS.svg"
-                alt="Why RCS"
+                src="/images/two-way-communication-ui.svg"
+                alt="Interactive Rich Media RCS Experience"
                 fill
-                className="object-contain p-4"
+                sizes="(max-width: 768px) 100vw, 450px"
+                className="object-contain p-2"
               />
             </div>
           </div>
 
           <div className="lg:col-span-6 space-y-6">
             <div className="space-y-3">
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+              <h2 className="signy-subsection-heading">
                 Why Should Your Business Use RCS?
               </h2>
               <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
@@ -118,14 +120,14 @@ export default function RcsPage() {
             </div>
 
             <div className="space-y-3 pt-4 border-t border-slate-100">
-              <h3 className="text-xl font-bold text-slate-900">What Is RCS Messaging?</h3>
+              <h3 className="signy-card-heading">What Is RCS Messaging?</h3>
               <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
                 RCS (Rich Communication Services) is a next-generation messaging protocol that transforms ordinary texting into a dynamic, multimedia experience. It empowers businesses to enrich messages with images, stickers, videos, GIFs, and interactive buttons—turning every exchange into an engaging conversation.
               </p>
             </div>
 
             <div className="space-y-3 pt-4 border-t border-slate-100">
-              <h3 className="text-xl font-bold text-slate-900">What Makes Signy Different?</h3>
+              <h3 className="signy-card-heading">What Makes Signy Different?</h3>
               <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
                 Our RCS platform goes beyond the basics. We deliver advanced features like group chats, high-quality video sharing, seamless file transfer, and rich multimedia support—all designed to increase engagement, improve satisfaction, and deliver measurable business outcomes.
               </p>

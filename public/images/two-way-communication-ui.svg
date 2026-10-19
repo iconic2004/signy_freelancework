@@ -1,0 +1,64 @@
+<svg width="600" height="500" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadowTwoWay" x="0" y="0" width="600" height="500" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.04"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadowTwoWay)">
+    <!-- Smartphone Container -->
+    <rect x="130" y="20" width="340" height="460" rx="36" fill="#0F172A"/>
+    <rect x="134" y="24" width="332" height="452" rx="32" fill="#1E293B"/>
+    <rect x="138" y="28" width="324" height="444" rx="28" fill="#F8FAFC"/>
+
+    <!-- Dynamic Island -->
+    <rect x="240" y="34" width="120" height="18" rx="9" fill="#0F172A"/>
+
+    <!-- Header Bar -->
+    <rect x="138" y="28" width="324" height="66" rx="28" fill="#FFFFFF"/>
+    <!-- Back arrow -->
+    <path d="M 154 68 L 162 60 M 154 68 L 162 76 M 154 68 L 170 68" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Avatar -->
+    <circle cx="190" cy="68" r="16" fill="#CCFBF1"/>
+    <text x="190" y="73" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="800" fill="#0D9488" text-anchor="middle">2W</text>
+
+    <!-- Title -->
+    <text x="214" y="65" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#0F172A">Apollo Clinics</text>
+    <text x="214" y="77" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="600" fill="#0D9488">2-Way Verified Channel</text>
+
+    <!-- Timestamp -->
+    <text x="300" y="116" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="500" fill="#94A3B8" text-anchor="middle">Interactive Appointment Dispatch • 09:15 AM</text>
+
+    <!-- Step 1: Business Inbound Prompt (Left) -->
+    <rect x="150" y="132" width="280" height="92" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="164" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#0F172A">Appointment Confirmation</text>
+    <text x="164" y="170" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#334155">Hi Rohan, your dental checkup with Dr. Mehta is scheduled for tomorrow at 11:30 AM.</text>
+    <text x="164" y="196" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#0D9488">Reply 1 to CONFIRM or 2 to RESCHEDULE</text>
+    <text x="390" y="214" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8.5" fill="#94A3B8">09:15 AM</text>
+
+    <!-- Step 2: Customer Reply (Right, Teal Bubble) -->
+    <rect x="360" y="240" width="88" height="40" rx="14" fill="#4ABFAD"/>
+    <text x="396" y="264" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+    <text x="424" y="274" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="7.5" fill="#E0F2FE">09:16</text>
+
+    <!-- Delivery receipt -->
+    <path d="M 436 270 L 438 272 L 442 268" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round"/>
+
+    <!-- Step 3: Instant Automated Confirmation (Left) -->
+    <rect x="150" y="296" width="280" height="84" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <rect x="164" y="308" width="20" height="20" rx="10" fill="#DCFCE7"/>
+    <path d="M 170 318 L 173 321 L 178 315" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="192" y="322" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#15803D">Appointment Confirmed</text>
+    <text x="164" y="342" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#334155">Thank you! Your slot is locked. Location directions sent to your email.</text>
+    <text x="164" y="364" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#0284C7">Clinic Location: map.signy.in/apollo-ind</text>
+    <text x="390" y="372" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8.5" fill="#94A3B8">09:16 AM</text>
+
+    <!-- Bottom Message Bar -->
+    <rect x="150" y="426" width="260" height="34" rx="17" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="168" y="447" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#94A3B8">Reply to Apollo Clinics...</text>
+    <circle cx="430" cy="443" r="15" fill="#0D9488"/>
+    <path d="M 425 443 L 433 438 L 433 448 Z" fill="#FFFFFF"/>
+  </g>
+</svg>

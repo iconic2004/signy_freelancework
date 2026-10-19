@@ -1,0 +1,63 @@
+<svg width="600" height="500" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadowVoiceFlow" x="0" y="0" width="600" height="500" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.04"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadowVoiceFlow)">
+    <rect x="50" y="30" width="500" height="440" rx="24" fill="#FFFFFF" stroke="#E2E8F0"/>
+
+    <text x="80" y="72" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="800" fill="#0F172A">Enterprise Voice &amp; IVR Architecture</text>
+    <text x="80" y="92" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#64748B">Carrier-grade SIP trunking with dynamic IVR call trees and sub-second connect times</text>
+
+    <!-- Node 1: Dynamic Outbound & Inbound Triggers -->
+    <rect x="80" y="120" width="440" height="70" rx="14" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <circle cx="116" cy="155" r="18" fill="#F5F3FF"/>
+    <path d="M 112 150 C 112 160 120 160 120 150" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"/>
+    <text x="148" y="146" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Trigger Engine &amp; API Dispatch</text>
+    <text x="148" y="164" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#64748B">Click-to-Call API • OTP Voice Verification • Automated Appointment Reminders</text>
+    <rect x="424" y="143" width="80" height="24" rx="12" fill="#EDE9FE"/>
+    <text x="464" y="158" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" fill="#6D28D9" text-anchor="middle">PRI / SIP</text>
+
+    <!-- Arrow -->
+    <line x1="300" y1="190" x2="300" y2="214" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="4 4"/>
+
+    <!-- Node 2: Multi-Carrier High-Concurrency SIP Engine -->
+    <rect x="80" y="214" width="440" height="74" rx="14" fill="#FDF4FF" stroke="#F0ABFC"/>
+    <circle cx="116" cy="251" r="18" fill="#FAE8FF"/>
+    <circle cx="116" cy="251" r="8" stroke="#C026D3" stroke-width="2" fill="none"/>
+    <text x="148" y="242" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Carrier Trunk Switching &amp; IVR Engine</text>
+    <text x="148" y="260" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#86198F">Text-to-Speech in 12+ Indian regional languages with intelligent multi-level DTMF IVR</text>
+    <rect x="424" y="239" width="80" height="24" rx="12" fill="#FAE8FF"/>
+    <text x="464" y="254" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" fill="#A21CAF" text-anchor="middle">10K Channels</text>
+
+    <!-- Arrow -->
+    <line x1="300" y1="288" x2="300" y2="312" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="4 4"/>
+
+    <!-- Live Performance Dashboard Grid -->
+    <rect x="80" y="314" width="440" height="130" rx="14" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="100" y="338" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#0F172A">Real-Time Voice Quality &amp; Delivery Telemetry</text>
+
+    <rect x="100" y="352" width="96" height="74" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="110" y="372" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="600" fill="#64748B">CONNECT RATE</text>
+    <text x="110" y="398" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800" fill="#15803D">98.9%</text>
+    <text x="110" y="416" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" fill="#166534">Carrier-grade</text>
+
+    <rect x="206" y="352" width="96" height="74" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="216" y="372" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="600" fill="#64748B">AVG PICKUP</text>
+    <text x="216" y="398" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800" fill="#0F172A">1.8s</text>
+    <text x="216" y="416" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" fill="#64748B">Instant signaling</text>
+
+    <rect x="312" y="352" width="96" height="74" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="322" y="372" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="600" fill="#64748B">AUDIO QUALITY</text>
+    <text x="322" y="398" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800" fill="#0F172A">4.8 <tspan font-size="10" font-weight="500">MOS</tspan></text>
+    <text x="322" y="416" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" fill="#64748B">HD Voice G.711</text>
+
+    <rect x="418" y="352" width="90" height="74" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="428" y="372" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="600" fill="#64748B">CONCURRENCY</text>
+    <text x="428" y="398" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800" fill="#7C3AED">25K+</text>
+    <text x="428" y="416" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" fill="#6D28D9">Simultaneous lines</text>
+  </g>
+</svg>

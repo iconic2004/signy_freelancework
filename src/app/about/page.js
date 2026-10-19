@@ -20,7 +20,7 @@ export default function AboutPage() {
               <span>About Signy Solutions</span>
             </span>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            <h1 className="signy-page-title">
               Celebrating over a decade of excellence in <span className="text-[#4ABFAD]">communication solutions</span>
             </h1>
 
@@ -59,14 +59,16 @@ export default function AboutPage() {
           </div>
 
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-md h-80 sm:h-96 bg-slate-50 rounded-3xl border border-slate-200 p-6 shadow-xl flex items-center justify-center overflow-hidden">
+            <div className="relative w-full max-w-md h-80 sm:h-96 bg-slate-100 rounded-3xl border border-slate-200 shadow-xl overflow-hidden group">
               <Image
-                src="/images/HomePageImage3.png"
-                alt="About Signy Solutions"
+                src="/images/about-team-authentic.jpg"
+                alt="Signy Solutions Engineering and Operations Team"
                 fill
                 priority
-                className="object-contain p-4"
+                sizes="(max-width: 768px) 100vw, 450px"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none" />
             </div>
           </div>
         </div>
@@ -82,7 +84,7 @@ export default function AboutPage() {
                 <Compass className="w-6 h-6" />
               </div>
 
-              <h2 className="text-2xl font-extrabold text-slate-900">
+              <h2 className="signy-subsection-heading">
                 Our Vision
               </h2>
 
@@ -99,7 +101,7 @@ export default function AboutPage() {
                 <Target className="w-6 h-6" />
               </div>
 
-              <h2 className="text-2xl font-extrabold text-slate-900">
+              <h2 className="signy-subsection-heading">
                 Our Mission
               </h2>
 

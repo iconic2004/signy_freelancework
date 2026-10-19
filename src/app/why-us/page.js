@@ -70,7 +70,7 @@ export default function WhyUsPage() {
             <Sparkles className="w-3.5 h-3.5 text-[#4ABFAD]" />
             <span>Enterprise Reliability & Trust</span>
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+          <h1 className="signy-page-title">
             Why Choose <span className="text-[#4ABFAD]">Signy</span>
           </h1>
           <p className="text-slate-600 text-lg leading-relaxed">
@@ -110,7 +110,7 @@ export default function WhyUsPage() {
             <span className="badge-teal bg-white/10 text-[#4ABFAD] border-white/20">
               High Availability Architecture
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
+            <h2 className="signy-section-heading text-white">
               Enterprise Technology Infrastructure
             </h2>
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
@@ -123,7 +123,7 @@ export default function WhyUsPage() {
               <div className="w-12 h-12 rounded-2xl bg-[#4ABFAD]/20 text-[#4ABFAD] flex items-center justify-center">
                 <Server className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-white">5 Independent Server Clusters</h3>
+              <h3 className="signy-card-heading text-white">5 Independent Server Clusters</h3>
               <p className="text-slate-400 text-sm leading-relaxed">
                 Our bulk SMS platform is powered by five independent servers. Should one encounter an issue, traffic is automatically rerouted instantly, guaranteeing zero downtime.
               </p>
@@ -133,7 +133,7 @@ export default function WhyUsPage() {
               <div className="w-12 h-12 rounded-2xl bg-blue-500/20 text-blue-400 flex items-center justify-center">
                 <Zap className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-white">Dedicated OTP & Trans-Promo</h3>
+              <h3 className="signy-card-heading text-white">Dedicated OTP & Trans-Promo</h3>
               <p className="text-slate-400 text-sm leading-relaxed">
                 We maintain dedicated servers for OTP and Trans-promotional messages, preventing congestion and ensuring high delivery rates even during peak festive rushes.
               </p>
@@ -143,7 +143,7 @@ export default function WhyUsPage() {
               <div className="w-12 h-12 rounded-2xl bg-purple-500/20 text-purple-400 flex items-center justify-center">
                 <ShieldCheck className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-white">Reseller & SMPP Connections</h3>
+              <h3 className="signy-card-heading text-white">Reseller & SMPP Connections</h3>
               <p className="text-slate-400 text-sm leading-relaxed">
                 Separate servers for resellers and SMPP connections allow you to reliably deliver high-throughput message batches to your audiences without latency bottlenecks.
               </p>
@@ -156,7 +156,7 @@ export default function WhyUsPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
           <span className="badge-teal">Engineering Excellence</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
+          <h2 className="signy-section-heading">
             What Makes Signy Technology Right for You
           </h2>
         </div>
@@ -172,7 +172,7 @@ export default function WhyUsPage() {
                 <div className="w-12 h-12 rounded-2xl bg-[#4ABFAD]/10 text-[#4ABFAD] flex items-center justify-center">
                   <Icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900">{item.title}</h3>
+                <h3 className="signy-card-heading">{item.title}</h3>
                 <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
               </div>
             );

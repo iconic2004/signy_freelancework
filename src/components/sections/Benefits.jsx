@@ -150,7 +150,7 @@ export default function Benefits() {
           <div className="overflow-hidden py-1">
             <h2
               ref={titleRef}
-              className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight will-change-transform"
+              className="signy-section-heading will-change-transform"
             >
               Why should you choose us?
             </h2>
@@ -202,7 +202,7 @@ export default function Benefits() {
                   </div>
 
                   <h3
-                    className={`text-lg font-bold mb-2 transition-colors ${
+                    className={`signy-card-heading mb-2 transition-colors ${
                       isActive ? "text-slate-900" : "text-slate-700"
                     }`}
                   >
@@ -238,7 +238,7 @@ export default function Benefits() {
               <span>Pillar {activeSlide + 1} of {BENEFITS.length}</span>
             </div>
 
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-snug">
+            <h3 className="signy-subsection-heading leading-snug">
               {current.title}
             </h3>
 

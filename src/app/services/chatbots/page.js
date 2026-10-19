@@ -27,7 +27,7 @@ export default function ChatbotsPage() {
               <span>Intelligent Conversational AI</span>
             </span>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            <h1 className="signy-page-title">
               Revolutionize Your Business with the Power of <span className="text-[#F59E0B]">AI Chatbots</span>
             </h1>
 
@@ -50,6 +50,7 @@ export default function ChatbotsPage() {
                 alt="AI Chatbots"
                 fill
                 priority
+                sizes="(max-width: 768px) 100vw, 450px"
                 className="object-contain p-4"
               />
             </div>
@@ -61,7 +62,7 @@ export default function ChatbotsPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-200/80 mb-20">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
           <span className="badge-teal">NLP Architecture</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
+          <h2 className="signy-section-heading">
             How Do Our Chatbots Work?
           </h2>
           <p className="text-slate-600 text-base">
@@ -78,7 +79,7 @@ export default function ChatbotsPage() {
               <span className="text-xs font-bold text-[#F59E0B] bg-[#F59E0B]/10 px-2.5 py-1 rounded-full">
                 {item.step}
               </span>
-              <h3 className="text-lg font-bold text-slate-900">{item.title}</h3>
+              <h3 className="signy-card-heading">{item.title}</h3>
               <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>
             </div>
           ))}
@@ -94,6 +95,7 @@ export default function ChatbotsPage() {
                 src="/images/why-do-need-chatbots.svg"
                 alt="Why Need Chatbots"
                 fill
+                sizes="(max-width: 768px) 100vw, 450px"
                 className="object-contain p-4"
               />
             </div>
@@ -101,7 +103,7 @@ export default function ChatbotsPage() {
 
           <div className="lg:col-span-6 space-y-6">
             <div className="space-y-3">
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+              <h2 className="signy-subsection-heading">
                 Why Does Your Business Need a Chatbot?
               </h2>
               <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
@@ -110,14 +112,14 @@ export default function ChatbotsPage() {
             </div>
 
             <div className="space-y-3 pt-4 border-t border-slate-100">
-              <h3 className="text-xl font-bold text-slate-900">What Are Chatbot Services?</h3>
+              <h3 className="signy-card-heading">What Are Chatbot Services?</h3>
               <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
                 Chatbot services are AI-driven conversational tools designed for instant, automated customer interaction. They deliver personalized, prompt responses and create memorable customer experiences by integrating your business’s unique solutions.
               </p>
             </div>
 
             <div className="space-y-3 pt-4 border-t border-slate-100">
-              <h3 className="text-xl font-bold text-slate-900">Key Benefits of Chatbot Services:</h3>
+              <h3 className="signy-card-heading">Key Benefits of Chatbot Services:</h3>
               <ul className="space-y-2 text-sm text-slate-700">
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#F59E0B] shrink-0" />

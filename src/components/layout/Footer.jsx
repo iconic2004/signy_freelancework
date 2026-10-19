@@ -38,6 +38,7 @@ export default function Footer() {
                   src="/images/logow.png"
                   alt="Signy"
                   fill
+                  sizes="144px"
                   className="object-contain object-left"
                 />
               </div>

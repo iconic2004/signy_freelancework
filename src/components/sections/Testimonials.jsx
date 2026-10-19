@@ -153,7 +153,7 @@ export default function Testimonials() {
           <div className="overflow-hidden py-1">
             <h2
               ref={titleRef}
-              className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight will-change-transform"
+              className="signy-section-heading will-change-transform"
             >
               Client&apos;s Testimonials
             </h2>

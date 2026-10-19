@@ -13,7 +13,7 @@ const DETAILED_SERVICES = [
     title: "Strategic Social Media Management",
     desc: "At Signy, we specialize in delivering premier social media marketing services designed to expertly amplify and grow your eCommerce business.",
     href: "/services/social-media",
-    img: "/images/service-details-banner-img.svg",
+    img: "/images/social-media-growth-ui.svg",
     badge: "Audience Growth",
     reverse: false
   },
@@ -21,7 +21,7 @@ const DETAILED_SERVICES = [
     title: "High-Impact Bulk SMS Campaigns",
     desc: "Leverage our results-focused bulk SMS service to effectively broadcast promotions, announcements, and surveys—driving engagement directly to your audience.",
     href: "/services/bulk-sms",
-    img: "/images/bluk-sms-service.svg",
+    img: "/images/bulk-sms-gateway-ui.svg",
     badge: "99.9% Route Deliverability",
     reverse: true
   },
@@ -29,7 +29,7 @@ const DETAILED_SERVICES = [
     title: "Comprehensive SEO Solutions",
     desc: "Our targeted SEO strategies help businesses stand out. We optimize visibility for a wide range of sectors, including online retail, hospitality, healthcare, home services, and beyond.",
     href: "/services/seo",
-    img: "/images/seo-service.svg",
+    img: "/images/seo-analytics-ui.svg",
     badge: "Organic Search Dominance",
     reverse: false
   },
@@ -37,7 +37,7 @@ const DETAILED_SERVICES = [
     title: "Dynamic Web Development",
     desc: "A website must do more than just exist—it must perform. We build and refine websites to boost functionality, improve user experience, and increase organic traffic.",
     href: "/services/web-development",
-    img: "/images/Web-Development.svg",
+    img: "/images/web-dev-architecture-ui.svg",
     badge: "High Performance Web",
     reverse: true
   },
@@ -45,7 +45,7 @@ const DETAILED_SERVICES = [
     title: "Interactive Two-Way Communication",
     desc: "True communication is always a dialogue. Signy enables meaningful interaction through advanced calling and SMS platforms that foster genuine connection and engagement.",
     href: "/services/two-way-communication",
-    img: "/images/Communication.svg",
+    img: "/images/two-way-communication-ui.svg",
     badge: "Interactive Messaging",
     reverse: false
   }
@@ -66,8 +66,8 @@ export default function ServicesPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
-              Our <span className="bg-gradient-to-r from-[#4ABFAD] to-[#1B2A4A] bg-clip-text text-transparent">Services</span>
+            <h1 className="signy-page-title">
+              Our <span className="text-[#4ABFAD]">Services</span>
             </h1>
 
             <p className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
@@ -91,10 +91,11 @@ export default function ServicesPage() {
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-md h-80 bg-white/70 rounded-3xl border border-slate-200 p-6 shadow-xl backdrop-blur-md flex items-center justify-center">
               <Image
-                src="/images/service-banner-img.svg"
-                alt="Signy Services"
+                src="/images/omnichannel-platform-ui.svg"
+                alt="Signy Enterprise Messaging Suite"
                 fill
                 priority
+                sizes="(max-width: 768px) 100vw, 450px"
                 className="object-contain p-4"
               />
             </div>
@@ -106,7 +107,7 @@ export default function ServicesPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
         <div className="bg-gradient-to-r from-[#1B2A4A] to-[#121B30] text-white rounded-3xl p-8 sm:p-12 shadow-xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 border border-slate-800">
           <div className="max-w-2xl space-y-3 text-center md:text-left">
-            <h2 className="text-2xl sm:text-3xl font-extrabold leading-snug">
+            <h2 className="signy-subsection-heading text-white leading-snug">
               Transform Your Vision into Tangible Business Success
             </h2>
             <p className="text-slate-300 text-sm sm:text-base">
@@ -137,7 +138,7 @@ export default function ServicesPage() {
               }`}
             >
               <span className="badge-teal">{item.badge}</span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+              <h2 className="signy-section-heading leading-tight">
                 {item.title}
               </h2>
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
@@ -163,6 +164,7 @@ export default function ServicesPage() {
                   src={item.img}
                   alt={item.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, 520px"
                   className="object-contain p-6 group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -182,7 +184,7 @@ export default function ServicesPage() {
               <span className="badge-teal bg-white/10 text-[#4ABFAD] border-white/20">
                 <span>The Signy Advantage</span>
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
+              <h2 className="signy-section-heading text-white tracking-tight">
                 Why Choose Signy?
               </h2>
               <p className="text-slate-300 text-base leading-relaxed">
@@ -205,10 +207,11 @@ export default function ServicesPage() {
                       src={card.img}
                       alt={card.title}
                       fill
+                      sizes="48px"
                       className="object-contain p-2"
                     />
                   </div>
-                  <h3 className="text-lg font-bold text-white">
+                  <h3 className="signy-card-heading text-white">
                     {card.title}
                   </h3>
                   <p className="text-slate-400 text-xs leading-relaxed">

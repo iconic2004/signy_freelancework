@@ -50,7 +50,7 @@ export default function ContactPage() {
             <Sparkles className="w-3.5 h-3.5 text-[#4ABFAD]" />
             <span>Connect Directly With Our Specialists</span>
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight">
+          <h1 className="signy-page-title">
             Get in Touch!
           </h1>
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
@@ -60,23 +60,33 @@ export default function ContactPage() {
 
         {/* Contact Form & Visual Box */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
-          {/* Illustration Card */}
+          {/* Visual Card */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-md h-96 bg-white/70 rounded-3xl border border-slate-200 p-8 shadow-xl backdrop-blur-md flex items-center justify-center">
+            <div className="relative w-full max-w-md h-96 sm:h-[460px] bg-slate-100 rounded-3xl border border-slate-200 shadow-xl overflow-hidden group">
               <Image
-                src="/images/contact-form-img.svg"
-                alt="Contact Signy"
+                src="/images/contact-specialist-meeting.jpg"
+                alt="Signy Enterprise Messaging Specialists"
                 fill
-                className="object-contain p-6"
+                sizes="(max-width: 768px) 100vw, 450px"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
                 priority
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/10 to-transparent pointer-events-none" />
+              <div className="absolute bottom-6 left-6 right-6 text-white pointer-events-none">
+                <span className="inline-block px-2.5 py-1 rounded-full bg-[#4ABFAD]/90 text-slate-900 text-xs font-semibold uppercase tracking-wider mb-2">
+                  Direct Specialist Access
+                </span>
+                <p className="text-sm font-medium text-slate-100 leading-snug">
+                  Speak directly with senior messaging engineers and compliance consultants.
+                </p>
+              </div>
             </div>
           </div>
 
           {/* Form */}
           <div className="lg:col-span-7">
             <div className="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-xl relative overflow-hidden">
-              <h2 className="text-2xl font-bold text-slate-900 mb-6">
+              <h2 className="signy-subsection-heading mb-6">
                 Send us a message
               </h2>
 
@@ -173,7 +183,7 @@ export default function ContactPage() {
           {/* Contact Details List */}
           <div className="lg:col-span-6 glass-card rounded-3xl p-8 sm:p-10 flex flex-col justify-between space-y-6">
             <div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Address</h3>
+              <h3 className="signy-card-heading mb-2">Address</h3>
               <p className="text-slate-600 text-sm leading-relaxed flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-[#4ABFAD] shrink-0 mt-1" />
                 <span>{COMPANY_INFO.address}</span>

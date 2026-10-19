@@ -35,7 +35,7 @@ export default function WhatsAppApiPage() {
               <span>Official Meta Business Partner Platform</span>
             </span>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            <h1 className="signy-page-title">
               Transform Your Business Communication with <span className="text-[#25D366]">WhatsApp Business API</span>
             </h1>
 
@@ -52,13 +52,14 @@ export default function WhatsAppApiPage() {
           </div>
 
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-md h-80 bg-white/70 rounded-3xl border border-slate-200 p-6 shadow-xl backdrop-blur-md flex items-center justify-center">
+            <div className="relative w-full max-w-md h-80 sm:h-96 bg-white/70 rounded-3xl border border-slate-200 p-6 shadow-xl backdrop-blur-md flex items-center justify-center">
               <Image
-                src="/images/WhatsApp-Business-API.svg"
-                alt="WhatsApp Business API"
+                src="/images/whatsapp-business-hero-ui.svg"
+                alt="Signy WhatsApp Business API Verified Interface"
                 fill
                 priority
-                className="object-contain p-4"
+                sizes="(max-width: 768px) 100vw, 450px"
+                className="object-contain p-2"
               />
             </div>
           </div>
@@ -69,7 +70,7 @@ export default function WhatsAppApiPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-200/80 mb-20">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
           <span className="badge-teal">Process</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
+          <h2 className="signy-section-heading">
             How WhatsApp Business API Works
           </h2>
           <p className="text-slate-600 text-base">
@@ -86,7 +87,7 @@ export default function WhatsAppApiPage() {
               <span className="text-xs font-bold text-[#25D366] bg-[#25D366]/10 px-2.5 py-1 rounded-full">
                 {item.step}
               </span>
-              <h3 className="text-lg font-bold text-slate-900">{item.title}</h3>
+              <h3 className="signy-card-heading">{item.title}</h3>
               <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>
             </div>
           ))}
@@ -97,7 +98,7 @@ export default function WhatsAppApiPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 space-y-6">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">Why Choose Signy?</h2>
+            <h2 className="signy-subsection-heading">Why Choose Signy?</h2>
             <ul className="space-y-2 text-slate-700 text-sm">
               <li className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#25D366]" />
@@ -114,7 +115,7 @@ export default function WhatsAppApiPage() {
             </ul>
 
             <div className="pt-6 border-t border-slate-100 space-y-4">
-              <h3 className="text-xl font-bold text-slate-900">Message Types Available with WhatsApp API</h3>
+              <h3 className="signy-card-heading">Message Types Available with WhatsApp API</h3>
               <div className="space-y-3">
                 <div className="p-4 bg-white rounded-2xl border border-slate-200 shadow-sm">
                   <strong className="text-slate-900 block mb-1">Message Templates:</strong>
@@ -133,12 +134,13 @@ export default function WhatsAppApiPage() {
           </div>
 
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-md h-80 bg-white rounded-3xl border border-slate-200 p-6 shadow-xl flex items-center justify-center">
+            <div className="relative w-full max-w-md h-80 sm:h-96 bg-white rounded-3xl border border-slate-200 p-6 shadow-xl flex items-center justify-center">
               <Image
-                src="/images/pngaaa.com-7706910.png"
-                alt="WhatsApp Message Types"
+                src="/images/two-way-communication-ui.svg"
+                alt="Interactive WhatsApp Message Types"
                 fill
-                className="object-contain p-4"
+                sizes="(max-width: 768px) 100vw, 450px"
+                className="object-contain p-2"
               />
             </div>
           </div>
@@ -150,19 +152,20 @@ export default function WhatsAppApiPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5 flex justify-center">
-              <div className="relative w-full max-w-md h-80 bg-white rounded-3xl border border-slate-200 p-6 shadow-xl flex items-center justify-center">
+              <div className="relative w-full max-w-md h-80 sm:h-96 bg-white rounded-3xl border border-slate-200 p-6 shadow-xl flex items-center justify-center">
                 <Image
-                  src="/images/pngaaa.com-5199875.png"
-                  alt="WhatsApp API Advantages"
+                  src="/images/omnichannel-platform-ui.svg"
+                  alt="Enterprise WhatsApp API Integration Suite"
                   fill
-                  className="object-contain p-4"
+                  sizes="(max-width: 768px) 100vw, 450px"
+                  className="object-contain p-2"
                 />
               </div>
             </div>
 
             <div className="lg:col-span-7 space-y-6">
               <div className="space-y-3">
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+                <h2 className="signy-subsection-heading">
                   Why Use WhatsApp Business API?
                 </h2>
                 <p className="text-slate-600 text-base leading-relaxed">
@@ -171,7 +174,7 @@ export default function WhatsAppApiPage() {
               </div>
 
               <div className="space-y-3 pt-4 border-t border-slate-200">
-                <h3 className="text-xl font-bold text-slate-900">
+                <h3 className="signy-card-heading">
                   What Is WhatsApp Business API?
                 </h3>
                 <p className="text-slate-600 text-base leading-relaxed">

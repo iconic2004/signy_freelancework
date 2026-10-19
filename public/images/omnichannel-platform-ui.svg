@@ -1,0 +1,92 @@
+<svg width="600" height="500" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadowOmni" x="0" y="0" width="600" height="500" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.04"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadowOmni)">
+    <!-- Main Dashboard Card Frame -->
+    <rect x="50" y="30" width="500" height="440" rx="24" fill="#FFFFFF" stroke="#E2E8F0"/>
+
+    <!-- Header -->
+    <path d="M 50 54 Q 50 30 74 30 L 526 30 Q 550 30 550 54 L 550 84 L 50 84 Z" fill="#F8FAFC"/>
+    <circle cx="78" cy="57" r="5" fill="#EF4444"/>
+    <circle cx="94" cy="57" r="5" fill="#F59E0B"/>
+    <circle cx="110" cy="57" r="5" fill="#10B981"/>
+
+    <text x="134" y="61" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Signy Enterprise Messaging Suite</text>
+
+    <rect x="410" y="46" width="122" height="24" rx="12" fill="#ECFDF5" stroke="#A7F3D0"/>
+    <circle cx="422" cy="58" r="4" fill="#10B981"/>
+    <text x="432" y="62" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" fill="#047857">GATEWAYS HEALTHY</text>
+
+    <!-- Channels Throughput Bar -->
+    <rect x="74" y="100" width="452" height="106" rx="14" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="94" y="124" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#0F172A">Unified Communication Channels Real-Time Dispatch</text>
+
+    <!-- Channel Pill 1: WhatsApp -->
+    <rect x="94" y="136" width="98" height="54" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="106" y="154" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" fill="#15803D">WhatsApp API</text>
+    <text x="106" y="174" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800" fill="#0F172A">1.2M <tspan font-size="9" font-weight="500" fill="#64748B">msgs</tspan></text>
+    <text x="106" y="184" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="7.5" fill="#15803D">99.8% Read</text>
+
+    <!-- Channel Pill 2: Bulk SMS -->
+    <rect x="200" y="136" width="98" height="54" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="212" y="154" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" fill="#0284C7">Bulk SMS / DLT</text>
+    <text x="212" y="174" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800" fill="#0F172A">4.8M <tspan font-size="9" font-weight="500" fill="#64748B">msgs</tspan></text>
+    <text x="212" y="184" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="7.5" fill="#15803D">99.9% Deliv</text>
+
+    <!-- Channel Pill 3: RCS -->
+    <rect x="306" y="136" width="98" height="54" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="318" y="154" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" fill="#DB2777">RCS Messaging</text>
+    <text x="318" y="174" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800" fill="#0F172A">650K <tspan font-size="9" font-weight="500" fill="#64748B">msgs</tspan></text>
+    <text x="318" y="184" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="7.5" fill="#15803D">3.4x CTR</text>
+
+    <!-- Channel Pill 4: Voice & IVR -->
+    <rect x="412" y="136" width="98" height="54" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="424" y="154" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" fill="#7C3AED">Voice &amp; IVR</text>
+    <text x="424" y="174" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800" fill="#0F172A">340K <tspan font-size="9" font-weight="500" fill="#64748B">calls</tspan></text>
+    <text x="424" y="184" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="7.5" fill="#15803D">98.9% Pick</text>
+
+    <!-- Live Event Feed Table -->
+    <rect x="74" y="218" width="452" height="236" rx="16" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="94" y="244" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Real-Time Enterprise Messaging Stream</text>
+
+    <!-- Row 1 -->
+    <line x1="94" y1="294" x2="506" y2="294" stroke="#F1F5F9"/>
+    <rect x="94" y="260" width="28" height="28" rx="6" fill="#F0FDF4"/>
+    <circle cx="108" cy="274" r="5" fill="#22C55E"/>
+    <text x="132" y="272" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="700" fill="#0F172A">WhatsApp Business • Order Update Dispatched</text>
+    <text x="132" y="286" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#64748B">Recipient: +91 98402XXXXX • DLT Template: WABA_ORD_01</text>
+    <rect x="440" y="264" width="66" height="20" rx="10" fill="#DCFCE7"/>
+    <text x="473" y="278" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" fill="#15803D" text-anchor="middle">DELIVERED</text>
+
+    <!-- Row 2 -->
+    <line x1="94" y1="344" x2="506" y2="344" stroke="#F1F5F9"/>
+    <rect x="94" y="310" width="28" height="28" rx="6" fill="#EFF6FF"/>
+    <circle cx="108" cy="324" r="5" fill="#3B82F6"/>
+    <text x="132" y="322" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="700" fill="#0F172A">Google Verified SMS • Two-Factor Auth Code</text>
+    <text x="132" y="336" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#64748B">Recipient: +91 97110XXXXX • Verified by Google Security</text>
+    <rect x="440" y="314" width="66" height="20" rx="10" fill="#DCFCE7"/>
+    <text x="473" y="328" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" fill="#15803D" text-anchor="middle">VERIFIED</text>
+
+    <!-- Row 3 -->
+    <line x1="94" y1="394" x2="506" y2="394" stroke="#F1F5F9"/>
+    <rect x="94" y="360" width="28" height="28" rx="6" fill="#FDF2F8"/>
+    <circle cx="108" cy="374" r="5" fill="#EC4899"/>
+    <text x="132" y="372" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="700" fill="#0F172A">RCS Rich Messaging • Festive Promotional Card</text>
+    <text x="132" y="386" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#64748B">Recipient: +91 98118XXXXX • Action Chip Clicked</text>
+    <rect x="440" y="364" width="66" height="20" rx="10" fill="#FDF2F8"/>
+    <text x="473" y="378" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" fill="#BE185D" text-anchor="middle">ENGAGED</text>
+
+    <!-- Row 4 -->
+    <rect x="94" y="410" width="28" height="28" rx="6" fill="#F5F3FF"/>
+    <circle cx="108" cy="424" r="5" fill="#8B5CF6"/>
+    <text x="132" y="422" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="700" fill="#0F172A">AI Chatbot • Customer Return Inquiry Resolved</text>
+    <text x="132" y="436" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#64748B">Channel: Web Widget • Duration: 14s • CSAT: 5/5</text>
+    <rect x="440" y="414" width="66" height="20" rx="10" fill="#DCFCE7"/>
+    <text x="473" y="428" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" fill="#15803D" text-anchor="middle">RESOLVED</text>
+  </g>
+</svg>

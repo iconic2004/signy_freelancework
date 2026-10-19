@@ -27,7 +27,7 @@ export default function TwoWayCommunicationPage() {
               <span>Interactive Dialogues</span>
             </span>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            <h1 className="signy-page-title">
               Interactive <span className="text-[#4ABFAD]">2-Way Communication</span>
             </h1>
 
@@ -65,6 +65,7 @@ export default function TwoWayCommunicationPage() {
                 alt="Two-Way Communication"
                 fill
                 priority
+                sizes="(max-width: 768px) 100vw, 450px"
                 className="object-contain p-4"
               />
             </div>
@@ -76,7 +77,7 @@ export default function TwoWayCommunicationPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-200/80 mb-20">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
           <span className="badge-teal">Cycle</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
+          <h2 className="signy-section-heading">
             How Does It Work?
           </h2>
           <p className="text-slate-600 text-base">
@@ -93,7 +94,7 @@ export default function TwoWayCommunicationPage() {
               <span className="text-xs font-bold text-[#4ABFAD] bg-[#4ABFAD]/10 px-2.5 py-1 rounded-full">
                 Step {item.step}
               </span>
-              <h3 className="text-lg font-bold text-slate-900">{item.title}</h3>
+              <h3 className="signy-card-heading">{item.title}</h3>
               <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>
             </div>
           ))}
@@ -105,7 +106,7 @@ export default function TwoWayCommunicationPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-4">
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+              <h2 className="signy-subsection-heading">
                 Where Does It Come From?
               </h2>
               <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
@@ -114,7 +115,7 @@ export default function TwoWayCommunicationPage() {
             </div>
 
             <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4">
-              <h3 className="text-xl font-bold text-slate-900">Channels of Two-Way Communication:</h3>
+              <h3 className="signy-card-heading">Channels of Two-Way Communication:</h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-700">
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#4ABFAD]" />

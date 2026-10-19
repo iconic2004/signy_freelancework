@@ -11,11 +11,11 @@ export default function CancellationRefundPolicyPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-sm space-y-8">
           <div>
-            <span className="badge-teal mb-3">Policy Statement</span>
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            <span className="badge-teal mb-4">Policy Statement</span>
+            <h1 className="signy-page-title">
               Cancellation and Refund Policy
             </h1>
-            <p className="text-sm text-slate-500 mt-2">
+            <p className="text-sm text-slate-500 mt-3">
               Signy Solutions India Pvt Ltd • Last Revised: October 2026
             </p>
           </div>
@@ -25,7 +25,7 @@ export default function CancellationRefundPolicyPage() {
               At Signy, we are committed to delivering high-quality digital communication services. We recognize that circumstances may require the cancellation of an order or a request for a refund. This policy outlines the terms under which cancellations and refunds are handled.
             </p>
 
-            <h2 className="text-xl font-bold text-slate-900 pt-4 border-t border-slate-100">
+            <h2 className="signy-subsection-heading pt-4 border-t border-slate-100">
               General Cancellation Policy
             </h2>
             <p>
@@ -35,14 +35,14 @@ export default function CancellationRefundPolicyPage() {
               For one-time services (e.g., Bulk SMS, Voice Call, RCS, WhatsApp Business API credits), cancellation requests must be submitted before the service is fully rendered or message batches dispatched. Once the service has been initiated or completed, cancellations are not permitted.
             </p>
 
-            <h2 className="text-xl font-bold text-slate-900 pt-4 border-t border-slate-100">
+            <h2 className="signy-subsection-heading pt-4 border-t border-slate-100">
               Cancellation by Signy
             </h2>
             <p>
               We reserve the right to cancel any service at our discretion, particularly in cases of non-payment, misuse of messaging routes, DLT non-compliance, or violation of our terms and conditions. In such instances, no refund will be issued.
             </p>
 
-            <h2 className="text-xl font-bold text-slate-900 pt-4 border-t border-slate-100">
+            <h2 className="signy-subsection-heading pt-4 border-t border-slate-100">
               Refund Policy
             </h2>
             <p>
@@ -52,7 +52,7 @@ export default function CancellationRefundPolicyPage() {
               For ongoing services (e.g., SEO, digital marketing), a prorated refund may be issued if the service is canceled before the end of the billing cycle and no work has been started for that period.
             </p>
 
-            <h2 className="text-xl font-bold text-slate-900 pt-4 border-t border-slate-100">
+            <h2 className="signy-subsection-heading pt-4 border-t border-slate-100">
               Non-Refundable Services
             </h2>
             <p>
@@ -62,7 +62,7 @@ export default function CancellationRefundPolicyPage() {
               One-time services such as Bulk SMS, Voice Call, RCS, and WhatsApp Business API message consumptions are strictly non-refundable once dispatched to carrier networks.
             </p>
 
-            <h2 className="text-xl font-bold text-slate-900 pt-4 border-t border-slate-100">
+            <h2 className="signy-subsection-heading pt-4 border-t border-slate-100">
               Refund Request Process
             </h2>
             <p>
@@ -72,14 +72,14 @@ export default function CancellationRefundPolicyPage() {
               Refund requests will be reviewed and processed within 14 business days. Approved refunds will be issued to the original payment method.
             </p>
 
-            <h2 className="text-xl font-bold text-slate-900 pt-4 border-t border-slate-100">
+            <h2 className="signy-subsection-heading pt-4 border-t border-slate-100">
               Disputes and Chargebacks
             </h2>
             <p>
               We strongly encourage clients to contact our support team at <a href={COMPANY_INFO.emailHref} className="text-[#4ABFAD] underline">{COMPANY_INFO.email}</a> to resolve any issues before initiating a dispute or chargeback with their payment provider. Filing a chargeback or dispute without first contacting our team is considered a violation of this policy and may result in service termination.
             </p>
 
-            <h2 className="text-xl font-bold text-slate-900 pt-4 border-t border-slate-100">
+            <h2 className="signy-subsection-heading pt-4 border-t border-slate-100">
               Contact Information
             </h2>
             <p>

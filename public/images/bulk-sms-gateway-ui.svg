@@ -1,0 +1,83 @@
+<svg width="600" height="500" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadowSMS" x="0" y="0" width="600" height="500" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.04"/>
+    </filter>
+  </defs>
+
+  <!-- Modern Enterprise SMS Dispatcher Console -->
+  <g filter="url(#shadowSMS)">
+    <!-- Console Outer Card -->
+    <rect x="50" y="30" width="500" height="440" rx="24" fill="#FFFFFF" stroke="#E2E8F0"/>
+    
+    <!-- Top Bar of Console -->
+    <path d="M 50 54 Q 50 30 74 30 L 526 30 Q 550 30 550 54 L 550 82 L 50 82 Z" fill="#F8FAFC"/>
+    <circle cx="78" cy="56" r="5" fill="#EF4444"/>
+    <circle cx="94" cy="56" r="5" fill="#F59E0B"/>
+    <circle cx="110" cy="56" r="5" fill="#10B981"/>
+
+    <rect x="140" y="44" width="220" height="24" rx="6" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="152" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748B">signy.io/enterprise/sms-dispatcher</text>
+
+    <!-- Console Status Badge -->
+    <rect x="420" y="44" width="112" height="24" rx="12" fill="#ECFDF5" stroke="#A7F3D0"/>
+    <circle cx="432" cy="56" r="4" fill="#10B981"/>
+    <text x="442" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#047857">DLT ROUTE LIVE</text>
+
+    <!-- Metrics Row -->
+    <!-- Metric 1: Throughput -->
+    <rect x="74" y="98" width="140" height="68" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="88" y="118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#64748B">DISPATCH SPEED</text>
+    <text x="88" y="146" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#0F172A">4,800 <tspan font-size="11" font-weight="500" fill="#64748B">/sec</tspan></text>
+
+    <!-- Metric 2: Delivery Success -->
+    <rect x="230" y="98" width="140" height="68" rx="12" fill="#F0FDF4" stroke="#BBF7D0"/>
+    <text x="244" y="118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#166534">DELIVERY SUCCESS</text>
+    <text x="244" y="146" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#15803D">99.94%</text>
+
+    <!-- Metric 3: Carrier Latency -->
+    <rect x="386" y="98" width="140" height="68" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="400" y="118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#64748B">AVG LATENCY</text>
+    <text x="400" y="146" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#0F172A">18ms</text>
+
+    <!-- Campaign Dispatch Live Stream -->
+    <rect x="74" y="180" width="452" height="268" rx="16" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="94" y="208" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Real-Time DLT Campaign Queues</text>
+
+    <!-- Table Header -->
+    <rect x="94" y="222" width="412" height="26" rx="6" fill="#F8FAFC"/>
+    <text x="106" y="239" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" fill="#64748B">SENDER ID</text>
+    <text x="200" y="239" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" fill="#64748B">CAMPAIGN TYPE</text>
+    <text x="320" y="239" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" fill="#64748B">VOLUME</text>
+    <text x="420" y="239" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" fill="#64748B">STATUS</text>
+
+    <!-- Row 1 -->
+    <line x1="94" y1="284" x2="506" y2="284" stroke="#F1F5F9" stroke-width="1"/>
+    <text x="106" y="268" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#0F172A">SIGNYS-OTP</text>
+    <text x="200" y="268" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#334155">Critical Auth (Priority 1)</text>
+    <text x="320" y="268" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#0F172A">128,450</text>
+    <rect x="420" y="254" width="76" height="20" rx="10" fill="#DCFCE7"/>
+    <text x="458" y="268" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" fill="#15803D" text-anchor="middle">DELIVERED</text>
+
+    <!-- Row 2 -->
+    <line x1="94" y1="334" x2="506" y2="334" stroke="#F1F5F9" stroke-width="1"/>
+    <text x="106" y="316" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#0F172A">HDFCBK-TXN</text>
+    <text x="200" y="316" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#334155">Banking Transaction</text>
+    <text x="320" y="316" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#0F172A">84,120</text>
+    <rect x="420" y="302" width="76" height="20" rx="10" fill="#DCFCE7"/>
+    <text x="458" y="316" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" fill="#15803D" text-anchor="middle">DELIVERED</text>
+
+    <!-- Row 3 -->
+    <line x1="94" y1="384" x2="506" y2="384" stroke="#F1F5F9" stroke-width="1"/>
+    <text x="106" y="364" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#0F172A">DOMINOS-OFFER</text>
+    <text x="200" y="364" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#334155">Promotional Broadcast</text>
+    <text x="320" y="364" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#0F172A">450,000</text>
+    <rect x="420" y="350" width="76" height="20" rx="10" fill="#E0F2FE"/>
+    <text x="458" y="364" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" fill="#0369A1" text-anchor="middle">ROUTING (94%)</text>
+
+    <!-- Carrier Routing Node Footprint -->
+    <rect x="94" y="398" width="412" height="34" rx="8" fill="#F8FAFC"/>
+    <text x="110" y="419" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="600" fill="#64748B">Active Carrier Trunks: Jio Telecom • Airtel Enterprise • Vodafone Idea</text>
+  </g>
+</svg>

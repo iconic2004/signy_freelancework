@@ -16,8 +16,13 @@
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .animate-marquee {
@@ -25,6 +30,7 @@
   width: max-content;
   animation: marquee 32s linear infinite;
 }
+
 .animate-marquee:hover {
   animation-play-state: paused;
 }
@@ -52,6 +58,52 @@ body {
   overflow-x: hidden;
   position: relative;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   SITE-WIDE TYPOGRAPHY UPGRADE — Non-Hero Headings
+   Responsive clamp() sizing for readability and visual hierarchy.
+   Hero section headings are excluded from these rules.
+   ========================================================================== */
+
+/* Page-level h1 (non-hero): ~48–56px desktop, ~40–48px tablet, ~32–40px mobile */
+.signy-page-title {
+  font-size: clamp(2.125rem, 3.2vw + 1.25rem, 3.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #0F172A;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+/* Major section h2: ~32–44px desktop */
+.signy-section-heading {
+  font-size: clamp(1.875rem, 3vw + 0.25rem, 2.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: #0F172A;
+}
+
+/* Subsection h2/h3: ~24–32px desktop */
+.signy-subsection-heading {
+  font-size: clamp(1.5rem, 2vw + 0.25rem, 2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #0F172A;
+}
+
+/* Card-level h3: ~20–26px desktop */
+.signy-card-heading {
+  font-size: clamp(1.25rem, 1.5vw + 0.15rem, 1.5rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  color: #0F172A;
 }
 
 /* Teal glowing badge */
@@ -139,13 +191,16 @@ body {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: #F1F5F9;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #CBD5E1;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #94A3B8;
 }

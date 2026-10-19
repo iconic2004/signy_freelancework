@@ -68,7 +68,7 @@ export default function BulkSmsPage() {
               <span>High Deliverability & DLT Compliant</span>
             </span>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            <h1 className="signy-page-title">
               Expand Your Reach with Signy <span className="text-[#4ABFAD]">Bulk SMS</span> Service
             </h1>
 
@@ -91,6 +91,7 @@ export default function BulkSmsPage() {
                 alt="Bulk SMS Service"
                 fill
                 priority
+                sizes="(max-width: 768px) 100vw, 450px"
                 className="object-contain p-4"
               />
             </div>
@@ -102,7 +103,7 @@ export default function BulkSmsPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-200/80 mb-20">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
           <span className="badge-teal">Workflow</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">How It Works?</h2>
+          <h2 className="signy-section-heading">How It Works?</h2>
           <p className="text-slate-600 text-base">
             Bulk SMS is a dynamic tool that allows businesses to instantly reach thousands of customers with precision and impact.
           </p>
@@ -117,7 +118,7 @@ export default function BulkSmsPage() {
               <span className="text-xs font-bold text-[#4ABFAD] bg-[#4ABFAD]/10 px-2.5 py-1 rounded-full">
                 {step.step}
               </span>
-              <h3 className="text-lg font-bold text-slate-900">{step.title}</h3>
+              <h3 className="signy-card-heading">{step.title}</h3>
               <p className="text-xs text-slate-600 leading-relaxed">{step.desc}</p>
             </div>
           ))}
@@ -133,6 +134,7 @@ export default function BulkSmsPage() {
                 src="/images/bluk-sms-service.svg"
                 alt="What is Bulk SMS"
                 fill
+                sizes="(max-width: 768px) 100vw, 450px"
                 className="object-contain p-4"
               />
             </div>
@@ -140,14 +142,14 @@ export default function BulkSmsPage() {
 
           <div className="lg:col-span-6 space-y-6">
             <div className="space-y-3">
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">What Is Bulk SMS?</h2>
+              <h2 className="signy-subsection-heading">What Is Bulk SMS?</h2>
               <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
                 Bulk SMS is a powerful, direct channel for businesses to engage customers at scale. It simplifies outreach while maximizing open rates and conversions. With Signy, you can connect with diverse audiences seamlessly and elevate your communication strategy.
               </p>
             </div>
 
             <div className="space-y-3 pt-4 border-t border-slate-100">
-              <h3 className="text-xl font-bold text-slate-900">Why Choose Bulk SMS?</h3>
+              <h3 className="signy-card-heading">Why Choose Bulk SMS?</h3>
               <ul className="space-y-2 text-sm text-slate-700">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#4ABFAD] shrink-0 mt-0.5" />
@@ -172,7 +174,7 @@ export default function BulkSmsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-6">
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+              <h2 className="signy-subsection-heading">
                 Scale Your Business with Signy Bulk SMS
               </h2>
               <ul className="space-y-3 text-sm text-slate-700">
@@ -192,7 +194,7 @@ export default function BulkSmsPage() {
             </div>
 
             <div className="lg:col-span-6 bg-white p-8 rounded-3xl border border-slate-200 shadow-xl space-y-5">
-              <h3 className="text-xl font-bold text-slate-900">Get started in 5 easy steps</h3>
+              <h3 className="signy-card-heading">Get started in 5 easy steps</h3>
               <div className="space-y-3">
                 {ONBOARDING_STEPS.map((step) => (
                   <div key={step.num} className="flex items-start gap-3">
@@ -215,7 +217,7 @@ export default function BulkSmsPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
           <span className="badge-teal">Enterprise Advantages</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
+          <h2 className="signy-section-heading">
             How Can Signy Bulk SMS Elevate Your Business?
           </h2>
         </div>
@@ -231,7 +233,7 @@ export default function BulkSmsPage() {
                 <div className="w-12 h-12 rounded-2xl bg-[#4ABFAD]/10 text-[#4ABFAD] flex items-center justify-center">
                   <Icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900">{item.title}</h3>
+                <h3 className="signy-card-heading">{item.title}</h3>
                 <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
               </div>
             );

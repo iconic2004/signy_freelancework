@@ -1,0 +1,64 @@
+<svg width="600" height="500" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadowFlow" x="0" y="0" width="600" height="500" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.04"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadowFlow)">
+    <!-- Canvas Card -->
+    <rect x="50" y="30" width="500" height="440" rx="24" fill="#FFFFFF" stroke="#E2E8F0"/>
+
+    <!-- Header -->
+    <text x="80" y="72" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="800" fill="#0F172A">24/7 Intelligent Customer Resolution Flow</text>
+    <text x="80" y="92" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#64748B">Seamless triage between autonomous AI responses and human specialist escalation</text>
+
+    <!-- Step 1: Customer Channels -->
+    <rect x="80" y="120" width="440" height="72" rx="14" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <circle cx="116" cy="156" r="18" fill="#EFF6FF"/>
+    <path d="M 110 156 C 110 150 122 150 122 156 C 122 162 110 162 110 156 Z" fill="#2563EB"/>
+    <text x="148" y="148" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Omnichannel Inbound Inquiries</text>
+    <text x="148" y="166" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#64748B">WhatsApp Business • SMS • Website Widget • Mobile App</text>
+    <rect x="424" y="144" width="80" height="24" rx="12" fill="#DBEAFE"/>
+    <text x="464" y="159" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" fill="#1D4ED8" text-anchor="middle">&lt; 1s Response</text>
+
+    <!-- Connector line -->
+    <line x1="300" y1="192" x2="300" y2="216" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="4 4"/>
+    <path d="M 296 212 L 300 218 L 304 212" fill="#94A3B8"/>
+
+    <!-- Step 2: NLP Intent Recognition & Processing Engine -->
+    <rect x="80" y="218" width="440" height="74" rx="14" fill="#F0FDFA" stroke="#99F6E4"/>
+    <circle cx="116" cy="255" r="18" fill="#CCFBF1"/>
+    <path d="M 116 247 L 118 252 L 123 255 L 118 258 L 116 263 L 114 258 L 109 255 L 114 252 Z" fill="#0D9488"/>
+    <text x="148" y="246" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Intent Classification &amp; Context Retrieval</text>
+    <text x="148" y="264" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#0F766E">Understands multilingual queries, order statuses, account FAQs, and bookings</text>
+    <rect x="424" y="243" width="80" height="24" rx="12" fill="#CCFBF1"/>
+    <text x="464" y="258" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" fill="#0F766E" text-anchor="middle">98.2% Accurate</text>
+
+    <!-- Split Connector Lines -->
+    <path d="M 220 292 L 220 318" stroke="#CBD5E1" stroke-width="2"/>
+    <path d="M 380 292 L 380 318" stroke="#CBD5E1" stroke-width="2"/>
+
+    <!-- Path A: 84% Instant AI Automated Resolution -->
+    <rect x="80" y="320" width="210" height="124" rx="14" fill="#F0FDF4" stroke="#BBF7D0"/>
+    <div xmlns="http://www.w3.org/1999/xhtml"></div>
+    <rect x="96" y="336" width="32" height="32" rx="8" fill="#DCFCE7"/>
+    <path d="M 106 352 L 110 356 L 118 348" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="136" y="348" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#166534">Automated Resolution</text>
+    <text x="136" y="362" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="800" fill="#15803D">84% of queries</text>
+    <text x="96" y="394" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#166534">Instantly resolves tracking, FAQs, appointments, invoices without human wait times.</text>
+    <text x="96" y="426" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" fill="#15803D">CSAT: 4.8 / 5.0 ⭐</text>
+
+    <!-- Path B: 16% Complex Escalation to Specialist -->
+    <rect x="310" y="320" width="210" height="124" rx="14" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <rect x="326" y="336" width="32" height="32" rx="8" fill="#F1F5F9"/>
+    <!-- Headset/Human icon -->
+    <circle cx="342" cy="349" r="6" stroke="#475569" stroke-width="1.8" fill="none"/>
+    <path d="M 333 361 C 333 356 351 356 351 361" stroke="#475569" stroke-width="1.8"/>
+    <text x="366" y="348" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#0F172A">Human Handoff</text>
+    <text x="366" y="362" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="800" fill="#334155">16% complex cases</text>
+    <text x="326" y="394" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#64748B">Transfers chat history &amp; customer profile instantly to specialist without asking user to repeat.</text>
+    <text x="326" y="426" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" fill="#2563EB">Zero Dropouts</text>
+  </g>
+</svg>

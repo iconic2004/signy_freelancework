@@ -110,7 +110,7 @@ export default function Services() {
           <div className="overflow-hidden py-1">
             <h2
               ref={titleRef}
-              className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight will-change-transform"
+              className="signy-section-heading will-change-transform"
             >
               What we are offering
             </h2>
@@ -160,7 +160,7 @@ export default function Services() {
                   )}
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#36BEA4] transition-colors">
+                  <h3 className="signy-card-heading mb-3 group-hover:text-[#36BEA4] transition-colors">
                     {service.title}
                   </h3>
 

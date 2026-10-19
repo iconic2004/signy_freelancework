@@ -1,0 +1,97 @@
+<svg width="600" height="500" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="0" y="0" width="600" height="500" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.04"/>
+    </filter>
+    <linearGradient id="bgGrad" x1="120" y1="20" x2="480" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Phone Mockup Container -->
+  <g filter="url(#shadow)">
+    <!-- Phone Outer Body -->
+    <rect x="130" y="20" width="340" height="460" rx="36" fill="#0F172A"/>
+    <!-- Phone Inner Bezel -->
+    <rect x="134" y="24" width="332" height="452" rx="32" fill="#1E293B"/>
+    <!-- Screen Area -->
+    <rect x="138" y="28" width="324" height="444" rx="28" fill="#EFEAE2"/>
+    
+    <!-- WhatsApp Background Doodle Pattern overlay -->
+    <rect x="138" y="28" width="324" height="444" rx="28" fill="#000000" fill-opacity="0.03"/>
+
+    <!-- WhatsApp Top Header Bar -->
+    <path d="M 138 56 Q 138 28 166 28 L 434 28 Q 462 28 462 56 L 462 94 L 138 94 Z" fill="#075E54"/>
+
+    <!-- Dynamic Island / Speaker -->
+    <rect x="240" y="34" width="120" height="18" rx="9" fill="#000000"/>
+
+    <!-- Header Navigation & Business Info -->
+    <!-- Back arrow -->
+    <path d="M 152 66 L 160 58 M 152 66 L 160 74 M 152 66 L 168 66" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Business Avatar -->
+    <circle cx="186" cy="66" r="16" fill="#128C7E"/>
+    <text x="186" y="71" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">S</text>
+    
+    <!-- Business Name & Verified Badge -->
+    <text x="210" y="63" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Signy Enterprise</text>
+    
+    <!-- Green Meta Verified Check Badge -->
+    <circle cx="316" cy="59" r="6.5" fill="#25D366"/>
+    <path d="M 313.5 59 L 315.5 61 L 318.5 57" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <text x="210" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="500" fill="#A7F3D0">Official Business Account</text>
+
+    <!-- Header Call & Menu Icons -->
+    <circle cx="414" cy="66" r="2" fill="#FFFFFF"/>
+    <circle cx="428" cy="66" r="2" fill="#FFFFFF"/>
+    <circle cx="442" cy="66" r="2" fill="#FFFFFF"/>
+
+    <!-- Security Encryption Notice -->
+    <rect x="160" y="104" width="280" height="28" rx="8" fill="#FFF9C4" fill-opacity="0.9"/>
+    <path d="M 172 118 C 172 116 173 114 175 114 C 177 114 178 116 178 118 L 179 118 C 180 118 180.5 119 180.5 120 L 180.5 124 C 180.5 125 180 125.5 179 125.5 L 171 125.5 C 170 125.5 169.5 125 169.5 124 L 169.5 120 C 169.5 119 170 118 171 118 Z" fill="#78350F"/>
+    <text x="185" y="122" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="500" fill="#78350F">Messages and calls are end-to-end encrypted.</text>
+
+    <!-- Message 1: Inbound Business Notification -->
+    <rect x="150" y="142" width="260" height="96" rx="12" fill="#FFFFFF"/>
+    <text x="162" y="160" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#075E54">Order Confirmed • #SG-94821</text>
+    <text x="162" y="177" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#334155">Hi Rahul, your order is dispatched!</text>
+    <text x="162" y="193" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748B">Expected delivery: Tomorrow by 2:00 PM</text>
+    <text x="162" y="208" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#0284C7">Tracking: signy.in/track/94821</text>
+    <text x="375" y="230" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8.5" fill="#94A3B8">10:14 AM</text>
+
+    <!-- Quick Action Button in WhatsApp Message -->
+    <rect x="156" y="244" width="248" height="30" rx="8" fill="#F0FDF4" stroke="#DCFCE7"/>
+    <path d="M 235 259 L 243 259 M 240 255 L 244 259 L 240 263" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="250" y="263" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#16A34A">Track Live Location</text>
+
+    <!-- Message 2: Customer Reply (Right Aligned, Green Bubble) -->
+    <rect x="220" y="286" width="230" height="48" rx="12" fill="#DCF8C6"/>
+    <text x="232" y="305" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#0F172A">Can I schedule for evening delivery?</text>
+    <text x="395" y="325" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8.5" fill="#64748B">10:15 AM</text>
+    <!-- Double Blue Checkmarks -->
+    <path d="M 432 323 L 434.5 325.5 L 439 320" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 435.5 323 L 438 325.5 L 442.5 320" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Message 3: Automated Business Reply with Interactive Options -->
+    <rect x="150" y="344" width="260" height="76" rx="12" fill="#FFFFFF"/>
+    <text x="162" y="362" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#0F172A">Slot updated: 5:00 PM – 8:00 PM.</text>
+    <text x="162" y="378" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748B">Need any other assistance?</text>
+    <rect x="162" y="388" width="108" height="22" rx="6" fill="#F1F5F9"/>
+    <text x="216" y="403" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="600" fill="#0F172A" text-anchor="middle">Chat with Agent</text>
+    <rect x="276" y="388" width="80" height="22" rx="6" fill="#F1F5F9"/>
+    <text x="316" y="403" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="600" fill="#0F172A" text-anchor="middle">View Receipt</text>
+    <text x="375" y="413" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8.5" fill="#94A3B8">10:15 AM</text>
+
+    <!-- Bottom Message Input Bar -->
+    <rect x="146" y="432" width="262" height="32" rx="16" fill="#FFFFFF"/>
+    <text x="164" y="452" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#94A3B8">Type a message...</text>
+    <circle cx="426" cy="448" r="14" fill="#128C7E"/>
+    <!-- Mic icon in send button -->
+    <path d="M 426 443 C 424.5 443 423.5 444 423.5 445.5 L 423.5 448.5 C 423.5 450 424.5 451 426 451 C 427.5 451 428.5 450 428.5 448.5 L 428.5 445.5 C 428.5 444 427.5 443 426 443 Z" fill="#FFFFFF"/>
+    <path d="M 421.5 447 C 421.5 450 423.5 452 426 452 C 428.5 452 430.5 450 430.5 447 M 426 452 L 426 454" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round"/>
+  </g>
+</svg>

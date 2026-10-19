@@ -310,6 +310,7 @@ export default function Navbar() {
                 alt="Signy"
                 fill
                 priority
+                sizes="(max-width: 640px) 128px, 144px"
                 className="object-contain object-left"
               />
             </div>
@@ -319,9 +320,9 @@ export default function Navbar() {
           <nav className="hidden md:flex items-center gap-1 lg:gap-2">
             <Link
               href="/"
-              className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+              className={`px-3 py-2 text-sm font-light rounded-lg transition-colors ${
                 pathname === "/"
-                  ? "text-[#4ABFAD] bg-[#4ABFAD]/10 font-semibold"
+                  ? "text-[#4ABFAD] bg-[#4ABFAD]/10"
                   : "text-slate-700 hover:text-[#4ABFAD] hover:bg-slate-50"
               }`}
             >
@@ -330,9 +331,9 @@ export default function Navbar() {
 
             <Link
               href="/about"
-              className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+              className={`px-3 py-2 text-sm font-light rounded-lg transition-colors ${
                 pathname === "/about"
-                  ? "text-[#4ABFAD] bg-[#4ABFAD]/10 font-semibold"
+                  ? "text-[#4ABFAD] bg-[#4ABFAD]/10"
                   : "text-slate-700 hover:text-[#4ABFAD] hover:bg-slate-50"
               }`}
             >
@@ -353,9 +354,9 @@ export default function Navbar() {
                 aria-expanded={dropdownOpen}
                 aria-haspopup="true"
                 aria-controls="services-dropdown-panel"
-                className={`flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-lg transition-all cursor-pointer ${
+                className={`flex items-center gap-1.5 px-3 py-2 text-sm font-light rounded-lg transition-all cursor-pointer ${
                   pathname.startsWith("/services") || dropdownOpen
-                    ? "text-[#4ABFAD] bg-[#4ABFAD]/10 font-semibold"
+                    ? "text-[#4ABFAD] bg-[#4ABFAD]/10"
                     : "text-slate-700 hover:text-[#4ABFAD] hover:bg-slate-50"
                 }`}
               >
@@ -459,9 +460,9 @@ export default function Navbar() {
 
             <Link
               href="/why-us"
-              className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+              className={`px-3 py-2 text-sm font-light rounded-lg transition-colors ${
                 pathname === "/why-us"
-                  ? "text-[#4ABFAD] bg-[#4ABFAD]/10 font-semibold"
+                  ? "text-[#4ABFAD] bg-[#4ABFAD]/10"
                   : "text-slate-700 hover:text-[#4ABFAD] hover:bg-slate-50"
               }`}
             >
@@ -473,7 +474,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <a
               href={`tel:${COMPANY_INFO.phoneHref}`}
-              className="text-xs font-semibold text-slate-600 hover:text-[#4ABFAD] transition-colors px-2 py-1"
+              className="text-xs font-light text-slate-600 hover:text-[#4ABFAD] transition-colors px-2 py-1"
             >
               {COMPANY_INFO.phone}
             </a>

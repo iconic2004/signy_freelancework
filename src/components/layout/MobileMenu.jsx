@@ -182,6 +182,7 @@ export default function MobileMenu({ isOpen, onClose, pathname }) {
               alt="Signy"
               fill
               priority
+              sizes="128px"
               className="object-contain object-left"
             />
           </div>

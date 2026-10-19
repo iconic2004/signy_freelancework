@@ -35,7 +35,7 @@ export default function GoogleVerifiedSmsPage() {
               <span>Official Google Verification Partner</span>
             </span>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            <h1 className="signy-page-title">
               Build Customer Trust with <span className="text-[#3B82F6]">Google Verified SMS</span>
             </h1>
 
@@ -52,13 +52,14 @@ export default function GoogleVerifiedSmsPage() {
           </div>
 
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-md h-80 bg-white/70 rounded-3xl border border-slate-200 p-6 shadow-xl backdrop-blur-md flex items-center justify-center">
+            <div className="relative w-full max-w-md h-80 sm:h-96 bg-white/70 rounded-3xl border border-slate-200 p-6 shadow-xl backdrop-blur-md flex items-center justify-center">
               <Image
-                src="/images/Google-Verified-SMS-Services.svg"
-                alt="Google Verified SMS"
+                src="/images/google-verified-sms-hero-ui.svg"
+                alt="Google Verified SMS Sender Identity Interface"
                 fill
                 priority
-                className="object-contain p-4"
+                sizes="(max-width: 768px) 100vw, 450px"
+                className="object-contain p-2"
               />
             </div>
           </div>
@@ -69,7 +70,7 @@ export default function GoogleVerifiedSmsPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-200/80 mb-20">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
           <span className="badge-teal">Trust Flow</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
+          <h2 className="signy-section-heading">
             How Does Verified SMS Work?
           </h2>
           <p className="text-slate-600 text-base">
@@ -87,7 +88,7 @@ export default function GoogleVerifiedSmsPage() {
                 {step.step}
               </span>
               <div className="flex items-center gap-2">
-                <h3 className="text-lg font-bold text-slate-900">{step.title}</h3>
+                <h3 className="signy-card-heading">{step.title}</h3>
                 {step.step === "Step 2" && (
                   <span className="w-5 h-5 relative shrink-0 inline-flex items-center justify-center">
                     <Image
@@ -110,19 +111,20 @@ export default function GoogleVerifiedSmsPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 flex justify-center">
-            <div className="relative w-full max-w-md h-80 bg-white rounded-3xl border border-slate-200 p-6 shadow-xl flex items-center justify-center">
+            <div className="relative w-full max-w-lg h-80 sm:h-96 bg-white rounded-3xl border border-slate-200 p-6 shadow-xl flex items-center justify-center">
               <Image
-                src="/images/why-need-google-verified-sms-services.svg"
-                alt="Why Need Google Verified SMS"
+                src="/images/verified_services.png"
+                alt="Official Google Verified vs Unverified SMS Comparison"
                 fill
-                className="object-contain p-4"
+                sizes="(max-width: 768px) 100vw, 500px"
+                className="object-contain p-2"
               />
             </div>
           </div>
 
           <div className="lg:col-span-6 space-y-6">
             <div className="space-y-3">
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+              <h2 className="signy-subsection-heading">
                 Why Your Business Needs Google Verified SMS?
               </h2>
               <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
@@ -131,7 +133,7 @@ export default function GoogleVerifiedSmsPage() {
             </div>
 
             <div className="space-y-3 pt-4 border-t border-slate-100">
-              <h3 className="text-xl font-bold text-slate-900">What Is Google Verified SMS?</h3>
+              <h3 className="signy-card-heading">What Is Google Verified SMS?</h3>
               <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
                 It’s a secure messaging format where each message from your business displays a verification symbol, confirming the sender&apos;s authenticity. This badge is granted only to businesses that complete Google&apos;s verification process.
               </p>

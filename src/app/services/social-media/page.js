@@ -29,7 +29,7 @@ export default function SocialMediaPage() {
               <span>Omnichannel Growth &amp; Engagement</span>
             </span>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            <h1 className="signy-page-title">
               Master Your Digital Presence with Strategic <span className="text-[#4ABFAD]">Social Media</span>
             </h1>
 
@@ -52,6 +52,7 @@ export default function SocialMediaPage() {
                 alt="Social Media Marketing"
                 fill
                 priority
+                sizes="(max-width: 768px) 100vw, 450px"
                 className="object-contain p-4"
               />
             </div>
@@ -63,7 +64,7 @@ export default function SocialMediaPage() {
       <section className="bg-slate-50 py-16 border-y border-slate-200/80 mb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center space-y-4">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+            <h2 className="signy-subsection-heading">
               What Is Social Media Marketing?
             </h2>
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
@@ -77,7 +78,7 @@ export default function SocialMediaPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
           <span className="badge-teal">Brand Growth</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
+          <h2 className="signy-section-heading">
             Key Benefits of Professional Social Media Marketing
           </h2>
         </div>
@@ -91,7 +92,7 @@ export default function SocialMediaPage() {
               <span className="text-xs font-bold text-[#4ABFAD] bg-[#4ABFAD]/10 px-3 py-1 rounded-full">
                 {item.num}
               </span>
-              <h3 className="text-xl font-bold text-slate-900">{item.title}</h3>
+              <h3 className="signy-card-heading">{item.title}</h3>
               <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
             </div>
           ))}

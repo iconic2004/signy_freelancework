@@ -29,7 +29,7 @@ export default function WebDevelopmentPage() {
               <span>Modern Scalable Architecture</span>
             </span>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            <h1 className="signy-page-title">
               Build Your Digital Foundation with Expert <span className="text-[#4ABFAD]">Web Development</span>
             </h1>
 
@@ -52,6 +52,7 @@ export default function WebDevelopmentPage() {
                 alt="Web Development"
                 fill
                 priority
+                sizes="(max-width: 768px) 100vw, 450px"
                 className="object-contain p-4"
               />
             </div>
@@ -63,7 +64,7 @@ export default function WebDevelopmentPage() {
       <section className="bg-slate-50 py-16 border-y border-slate-200/80 mb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center space-y-4">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+            <h2 className="signy-subsection-heading">
               What Is Web Development Marketing?
             </h2>
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
@@ -77,7 +78,7 @@ export default function WebDevelopmentPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
           <span className="badge-teal">Return On Investment</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
+          <h2 className="signy-section-heading">
             Why Choose Professional Web Development Services?
           </h2>
           <p className="text-slate-600 text-base">
@@ -94,7 +95,7 @@ export default function WebDevelopmentPage() {
               <span className="text-xs font-bold text-[#4ABFAD] bg-[#4ABFAD]/10 px-3 py-1 rounded-full">
                 {item.num}
               </span>
-              <h3 className="text-xl font-bold text-slate-900 group-hover:text-[#4ABFAD] transition-colors">
+              <h3 className="signy-card-heading group-hover:text-[#4ABFAD] transition-colors">
                 {item.title}
               </h3>
               <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>

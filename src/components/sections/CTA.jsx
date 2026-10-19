@@ -90,7 +90,8 @@ export default function CTA() {
             <div className="overflow-hidden py-1">
               <h2
                 ref={titleRef}
-                className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight will-change-transform"
+                className="signy-section-heading leading-tight will-change-transform"
+                style={{ color: "#4ABFAD" }}
               >
                 {CTA_CONTENT.headline}
               </h2>
@@ -109,7 +110,8 @@ export default function CTA() {
               <div ref={buttonRef} className="will-change-transform">
                 <Link
                   href={CTA_CONTENT.buttonHref}
-                  className="btn-primary text-base px-8 py-4 shadow-xl hover:scale-105 transition-all duration-200 group inline-flex items-center gap-2"
+                  className="btn-primary text-base px-8 py-4 !shadow-none hover:!shadow-none hover:scale-105 transition-all duration-200 group inline-flex items-center gap-2"
+                  style={{ boxShadow: "none" }}
                 >
                   <span>{CTA_CONTENT.buttonLabel}</span>
                   <ArrowRight className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" />

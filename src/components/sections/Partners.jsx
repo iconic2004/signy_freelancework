@@ -182,6 +182,7 @@ export default function Partners() {
                   src={partner.src}
                   alt={partner.name}
                   fill
+                  sizes="(max-width: 640px) 80px, 96px"
                   className="object-contain p-1.5 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
                 />
               </div>

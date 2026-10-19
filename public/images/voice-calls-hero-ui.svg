@@ -1,0 +1,79 @@
+<svg width="600" height="500" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadowVoice" x="0" y="0" width="600" height="500" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#0F172A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.04"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadowVoice)">
+    <!-- Phone Outer Body -->
+    <rect x="130" y="20" width="340" height="460" rx="36" fill="#0F172A"/>
+    <!-- Phone Inner Bezel -->
+    <rect x="134" y="24" width="332" height="452" rx="32" fill="#1E293B"/>
+    <!-- Screen Area (Call Interface: Premium Dark Theme) -->
+    <rect x="138" y="28" width="324" height="444" rx="28" fill="#0B132B"/>
+
+    <!-- Dynamic Notch -->
+    <rect x="240" y="34" width="120" height="18" rx="9" fill="#000000"/>
+
+    <!-- Call Status Header -->
+    <text x="300" y="78" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="middle">OUTBOUND VERIFIED CALL</text>
+    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#38BDF8" text-anchor="middle">02:45</text>
+
+    <!-- Caller Branded Profile -->
+    <circle cx="300" cy="154" r="38" fill="#1E293B" stroke="#4ABFAD" stroke-width="2"/>
+    <text x="300" y="163" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="800" fill="#4ABFAD" text-anchor="middle">S</text>
+
+    <!-- Caller Title & Verification -->
+    <text x="300" y="214" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="800" fill="#FFFFFF" text-anchor="middle">Signy Voice Connect</text>
+    
+    <rect x="230" y="226" width="140" height="22" rx="11" fill="#1E293B"/>
+    <circle cx="244" cy="237" r="5" fill="#10B981"/>
+    <text x="254" y="241" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" fill="#10B981">Verified Enterprise Caller</text>
+
+    <!-- Audio Waveform Live Visualizer -->
+    <g transform="translate(185, 268)">
+      <rect x="0" y="12" width="4" height="16" rx="2" fill="#4ABFAD"/>
+      <rect x="10" y="6" width="4" height="28" rx="2" fill="#4ABFAD"/>
+      <rect x="20" y="14" width="4" height="12" rx="2" fill="#4ABFAD"/>
+      <rect x="30" y="2" width="4" height="36" rx="2" fill="#38BDF8"/>
+      <rect x="40" y="8" width="4" height="24" rx="2" fill="#38BDF8"/>
+      <rect x="50" y="0" width="4" height="40" rx="2" fill="#4ABFAD"/>
+      <rect x="60" y="6" width="4" height="28" rx="2" fill="#4ABFAD"/>
+      <rect x="70" y="10" width="4" height="20" rx="2" fill="#4ABFAD"/>
+      <rect x="80" y="4" width="4" height="32" rx="2" fill="#38BDF8"/>
+      <rect x="90" y="12" width="4" height="16" rx="2" fill="#4ABFAD"/>
+      <rect x="100" y="0" width="4" height="40" rx="2" fill="#4ABFAD"/>
+      <rect x="110" y="6" width="4" height="28" rx="2" fill="#38BDF8"/>
+      <rect x="120" y="14" width="4" height="12" rx="2" fill="#4ABFAD"/>
+      <rect x="130" y="4" width="4" height="32" rx="2" fill="#4ABFAD"/>
+      <rect x="140" y="8" width="4" height="24" rx="2" fill="#4ABFAD"/>
+      <rect x="150" y="12" width="4" height="16" rx="2" fill="#4ABFAD"/>
+      <rect x="160" y="16" width="4" height="8" rx="2" fill="#4ABFAD"/>
+      <rect x="170" y="14" width="4" height="12" rx="2" fill="#4ABFAD"/>
+      <rect x="180" y="8" width="4" height="24" rx="2" fill="#38BDF8"/>
+      <rect x="190" y="12" width="4" height="16" rx="2" fill="#4ABFAD"/>
+      <rect x="200" y="16" width="4" height="8" rx="2" fill="#4ABFAD"/>
+      <rect x="210" y="14" width="4" height="12" rx="2" fill="#4ABFAD"/>
+      <rect x="220" y="16" width="4" height="8" rx="2" fill="#4ABFAD"/>
+    </g>
+    <text x="300" y="324" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="600" fill="#94A3B8" text-anchor="middle">Crystal Clear HD Audio Codec (Opus 48kHz)</text>
+
+    <!-- Keypad / Control Buttons Grid -->
+    <!-- Row 1 -->
+    <circle cx="210" cy="360" r="22" fill="#1E293B"/>
+    <text x="210" y="364" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#FFFFFF" text-anchor="middle">Mute</text>
+
+    <circle cx="300" cy="360" r="22" fill="#1E293B"/>
+    <text x="300" y="364" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#FFFFFF" text-anchor="middle">Keypad</text>
+
+    <circle cx="390" cy="360" r="22" fill="#1E293B"/>
+    <text x="390" y="364" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#FFFFFF" text-anchor="middle">Speaker</text>
+
+    <!-- End Call Button (Red Circle) -->
+    <circle cx="300" cy="424" r="26" fill="#EF4444"/>
+    <!-- Phone Down Icon -->
+    <path d="M 288 426 C 292 418 308 418 312 426" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

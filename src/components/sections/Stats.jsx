@@ -124,7 +124,7 @@ export default function Stats() {
           <div className="overflow-hidden py-1">
             <h2
               ref={titleRef}
-              className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight will-change-transform"
+              className="signy-section-heading will-change-transform"
             >
               Ready to see what <span className="text-[#36BEA4]">Signy</span> can do for you?
             </h2>
@@ -166,7 +166,7 @@ export default function Stats() {
                     {item.value}
                   </div>
 
-                  <h3 className="text-lg font-bold text-slate-800 mb-3 capitalize">
+                  <h3 className="signy-card-heading text-slate-800 mb-3 capitalize">
                     {item.title}
                   </h3>
 

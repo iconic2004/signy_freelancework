@@ -27,7 +27,7 @@ export default function VoiceCallsPage() {
               <span>Crystal Clear Outbound Voice &amp; IVR</span>
             </span>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            <h1 className="signy-page-title">
               Elevate Your Engagement with Premier <span className="text-[#8B5CF6]">Voice Call Solutions</span>
             </h1>
 
@@ -50,6 +50,7 @@ export default function VoiceCallsPage() {
                 alt="Voice Calls"
                 fill
                 priority
+                sizes="(max-width: 768px) 100vw, 450px"
                 className="object-contain p-4"
               />
             </div>
@@ -61,7 +62,7 @@ export default function VoiceCallsPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-200/80 mb-20">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
           <span className="badge-teal">Onboarding</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">How It Works?</h2>
+          <h2 className="signy-section-heading">How It Works?</h2>
           <p className="text-slate-600 text-base">
             As your trusted voice call partner, we guide you through a simple, step-by-step setup designed for success.
           </p>
@@ -76,7 +77,7 @@ export default function VoiceCallsPage() {
               <span className="text-xs font-bold text-[#8B5CF6] bg-[#8B5CF6]/10 px-2.5 py-1 rounded-full">
                 {item.step}
               </span>
-              <h3 className="text-lg font-bold text-slate-900">{item.title}</h3>
+              <h3 className="signy-card-heading">{item.title}</h3>
               <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>
             </div>
           ))}
@@ -87,7 +88,7 @@ export default function VoiceCallsPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+            <h2 className="signy-subsection-heading">
               Why Choose Signy?
             </h2>
             <p className="text-slate-600 text-base leading-relaxed">
@@ -115,6 +116,7 @@ export default function VoiceCallsPage() {
                 src="/images/companies-hire-voice-call.svg"
                 alt="Companies Hire Voice Call"
                 fill
+                sizes="(max-width: 768px) 100vw, 450px"
                 className="object-contain p-4"
               />
             </div>
@@ -126,14 +128,14 @@ export default function VoiceCallsPage() {
       <section className="bg-slate-50 py-20 border-y border-slate-200/80 mb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto space-y-6">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 text-center">
+            <h2 className="signy-subsection-heading text-center">
               What Is Voice Call Service?
             </h2>
             <p className="text-slate-600 text-base leading-relaxed text-center">
               Voice call service delivers automated, high-impact messages directly to your audience at scale. It offers accessible, memorable communication—especially effective in tier 2 and tier 3 regions—where voice calls often receive higher priority and engagement than texts or emails.
             </p>
             <div className="pt-6 space-y-3">
-              <h3 className="text-xl font-bold text-slate-900">Benefits of Voice Call Service:</h3>
+              <h3 className="signy-card-heading">Benefits of Voice Call Service:</h3>
               <ul className="space-y-2 text-sm text-slate-700">
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#8B5CF6] shrink-0" />
