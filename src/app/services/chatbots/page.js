@@ -46,12 +46,12 @@ export default function ChatbotsPage() {
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-md h-80 bg-white/70 rounded-3xl border border-slate-200 p-6 shadow-xl backdrop-blur-md flex items-center justify-center">
               <Image
-                src="/images/Chatbots.svg"
-                alt="AI Chatbots"
+                src="/images/chatbot-hero-3d.jpg"
+                alt="AI Chatbot Solutions — smartphone with conversational chat interface and floating 3D chat bubble elements"
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, 450px"
-                className="object-contain p-4"
+                className="object-cover rounded-2xl"
               />
             </div>
           </div>
@@ -92,11 +92,11 @@ export default function ChatbotsPage() {
           <div className="lg:col-span-6 flex justify-center">
             <div className="relative w-full max-w-md h-80 bg-white rounded-3xl border border-slate-200 p-6 shadow-xl flex items-center justify-center">
               <Image
-                src="/images/why-do-need-chatbots.svg"
-                alt="Why Need Chatbots"
+                src="/images/why-need-chatbots-3d.jpg"
+                alt="Why your business needs AI chatbots — 24/7 automated customer support with instant responses and scalable conversations"
                 fill
                 sizes="(max-width: 768px) 100vw, 450px"
-                className="object-contain p-4"
+                className="object-cover rounded-2xl"
               />
             </div>
           </div>

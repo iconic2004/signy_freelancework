@@ -179,8 +179,8 @@ export default function Hero() {
             <div ref={visualRef} className="signy-hero-visual">
               <div ref={imgWrapperRef} className="signy-hero-image-wrapper will-change-transform">
                 <Image
-                  src="/images/HomePageImage3.png"
-                  alt="Signy messaging platform"
+                  src="/images/hero-signy-phone.png"
+                  alt="Signy one-stop business solution - messaging platform with WhatsApp, SMS, chatbot and voice call integrations"
                   width={560}
                   height={420}
                   priority

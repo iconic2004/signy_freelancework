@@ -46,12 +46,12 @@ export default function VoiceCallsPage() {
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-md h-80 bg-white/70 rounded-3xl border border-slate-200 p-6 shadow-xl backdrop-blur-md flex items-center justify-center">
               <Image
-                src="/images/voice-calls.svg"
-                alt="Voice Calls"
+                src="/images/voice-calls-hero-3d.jpg"
+                alt="Voice Call Solutions — smartphone with active call interface, floating 3D telephone receiver and audio waveform elements"
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, 450px"
-                className="object-contain p-4"
+                className="object-cover rounded-2xl"
               />
             </div>
           </div>
@@ -113,11 +113,11 @@ export default function VoiceCallsPage() {
           <div className="lg:col-span-6 flex justify-center">
             <div className="relative w-full max-w-md h-80 bg-white rounded-3xl border border-slate-200 p-6 shadow-xl flex items-center justify-center">
               <Image
-                src="/images/companies-hire-voice-call.svg"
-                alt="Companies Hire Voice Call"
+                src="/images/why-choose-voice-calls-3d.jpg"
+                alt="Why choose Signy for voice calls — cloud telephony dashboard with call analytics, IVR, and reliable communication"
                 fill
                 sizes="(max-width: 768px) 100vw, 450px"
-                className="object-contain p-4"
+                className="object-cover rounded-2xl"
               />
             </div>
           </div>

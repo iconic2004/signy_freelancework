@@ -3,6 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import ScrollAnimationManager from "@/components/layout/ScrollAnimationManager";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -118,6 +119,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="min-h-screen flex flex-col bg-[#FAFBFC] text-[#0F172A] antialiased selection:bg-[#36BEA4]/20 selection:text-[#1B2A4A] relative">
+        <ScrollAnimationManager />
         <Navbar />
         <main className="flex-1 relative z-10">{children}</main>
         <Footer />

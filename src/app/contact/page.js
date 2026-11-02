@@ -2,42 +2,101 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Mail, Phone, MapPin, Send, CheckCircle2, AlertCircle, Sparkles } from "lucide-react";
-import emailjs from "@emailjs/browser";
 import { COMPANY_INFO } from "@/lib/constants";
+
+const COUNTRY_CODES = [
+  { code: "+91", country: "India" },
+  { code: "+1", country: "USA / Canada" },
+  { code: "+44", country: "UK" },
+  { code: "+971", country: "UAE" },
+  { code: "+65", country: "Singapore" },
+  { code: "+61", country: "Australia" },
+  { code: "+49", country: "Germany" },
+  { code: "+33", country: "France" },
+  { code: "+966", country: "Saudi Arabia" },
+  { code: "+974", country: "Qatar" },
+  { code: "+60", country: "Malaysia" },
+  { code: "+81", country: "Japan" },
+  { code: "+62", country: "Indonesia" },
+  { code: "+880", country: "Bangladesh" },
+  { code: "+94", country: "Sri Lanka" },
+  { code: "+977", country: "Nepal" },
+];
+
+const SERVICES = [
+  "Bulk SMS",
+  "WhatsApp Business API",
+  "Voice Calls",
+  "Google Verified SMS",
+  "RCS Messaging",
+  "Chatbots",
+  "All Enterprise Services",
+];
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    countryCode: "+91",
+    phone: "",
+    company: "",
+    designation: "",
+    service: "",
     message: "",
   });
-  const [status, setStatus] = useState("idle"); // idle | loading | success | error
+  const [status, setStatus] = useState("idle"); // idle | opened_whatsapp
+  const [errorMessage, setErrorMessage] = useState("");
+  const [whatsappUrl, setWhatsappUrl] = useState("");
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setStatus("loading");
+    setErrorMessage("");
+
+    // Validate required fields
+    if (!formData.name.trim()) {
+      setErrorMessage("Please enter your name.");
+      return;
+    }
+    if (!formData.email.trim()) {
+      setErrorMessage("Please enter a valid email address.");
+      return;
+    }
+    if (!formData.message.trim()) {
+      setErrorMessage("Please enter your message.");
+      return;
+    }
+
+    // Build the WhatsApp message with ALL form field values
+    const fullPhone = formData.phone.trim()
+      ? `${formData.countryCode} ${formData.phone.trim()}`
+      : "N/A";
+
+    const formattedMessage = `Hello Signy Team,
+
+I would like to get in touch regarding your services.
+
+Name: ${formData.name.trim()}
+Email: ${formData.email.trim()}
+Phone: ${fullPhone}
+Company: ${formData.company.trim() || "N/A"}
+Designation: ${formData.designation.trim() || "N/A"}
+Service Interested In: ${formData.service || "N/A"}
+Message: ${formData.message.trim()}
+
+Please get back to me.`;
+
+    const encodedText = encodeURIComponent(formattedMessage);
+    const targetUrl = `https://wa.me/919167775222?text=${encodedText}`;
+    setWhatsappUrl(targetUrl);
 
     try {
-      // Send message via EmailJS
-      await emailjs.send(
-        "service_default", // default service
-        "template_default", // default template
-        {
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-          reply_to: formData.email,
-        },
-        "JvbeSHly8I9hCxNSw" // User's public key from audit
-      );
-      setStatus("success");
-      setFormData({ name: "", email: "", message: "" });
+      window.open(targetUrl, "_blank", "noopener,noreferrer");
+      setStatus("opened_whatsapp");
     } catch (err) {
-      // In development or if template isn't configured in EmailJS dashboard yet, show polite success
-      console.warn("EmailJS notice:", err);
-      setStatus("success");
-      setFormData({ name: "", email: "", message: "" });
+      console.warn("WhatsApp open notice:", err);
+      setStatus("opened_whatsapp");
     }
   };
 
@@ -90,24 +149,60 @@ export default function ContactPage() {
                 Send us a message
               </h2>
 
-              {status === "success" ? (
-                <div className="p-6 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-800 space-y-2">
-                  <div className="flex items-center gap-2 font-bold text-lg">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-600" />
-                    <span>Thank you! Your message has been sent.</span>
+              {status === "opened_whatsapp" ? (
+                <div className="space-y-5">
+                  <div className="p-5 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 space-y-3">
+                    <div className="flex items-center gap-2 font-bold text-base">
+                      <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                      <span>WhatsApp Message Prepared</span>
+                    </div>
+                    <p className="text-xs sm:text-sm text-emerald-800 leading-relaxed">
+                      We have opened WhatsApp with your pre-filled message addressed to <strong>+91 91677 75222</strong>.
+                    </p>
+                    <div className="p-3 bg-white/80 rounded-xl border border-emerald-200/80 text-xs text-emerald-900 font-medium flex items-start gap-2">
+                      <span className="text-base leading-none">👉</span>
+                      <span><strong>Important:</strong> Please press <strong>Send</strong> inside WhatsApp to deliver your message directly to our team.</span>
+                    </div>
                   </div>
-                  <p className="text-sm text-emerald-700">
-                    Our team will review your requirements and respond within 1 business day.
-                  </p>
-                  <button
-                    onClick={() => setStatus("idle")}
-                    className="mt-3 text-xs font-semibold text-emerald-800 underline"
-                  >
-                    Send another message
-                  </button>
+
+                  <div className="flex flex-col sm:flex-row items-center gap-3 pt-2">
+                    <a
+                      href={whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-primary w-full sm:w-auto text-sm justify-center py-3"
+                    >
+                      <span className="w-4 h-4 relative shrink-0 inline-flex items-center justify-center">
+                        <Image
+                          src="/images/whatsapp-business-api.png"
+                          alt=""
+                          width={17}
+                          height={17}
+                          className="object-contain"
+                        />
+                      </span>
+                      <span>Open WhatsApp Again</span>
+                    </a>
+
+                    <button
+                      type="button"
+                      onClick={() => setStatus("idle")}
+                      className="btn-secondary w-full sm:w-auto text-sm justify-center py-3 cursor-pointer"
+                    >
+                      <span>Edit Details</span>
+                    </button>
+                  </div>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
+                  {errorMessage && (
+                    <div className="p-3.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs font-medium flex items-center gap-2">
+                      <AlertCircle className="w-4 h-4 shrink-0 text-rose-600" />
+                      <span>{errorMessage}</span>
+                    </div>
+                  )}
+
+                  {/* Name */}
                   <div>
                     <label className="block text-sm font-semibold text-slate-700 mb-1.5">
                       Your Name <span className="text-[#4ABFAD]">*</span>
@@ -122,6 +217,7 @@ export default function ContactPage() {
                     />
                   </div>
 
+                  {/* Email */}
                   <div>
                     <label className="block text-sm font-semibold text-slate-700 mb-1.5">
                       Email Address <span className="text-[#4ABFAD]">*</span>
@@ -136,6 +232,81 @@ export default function ContactPage() {
                     />
                   </div>
 
+                  {/* Phone with Country Code */}
+                  <div>
+                    <label className="block text-sm font-semibold text-slate-700 mb-1.5">
+                      Phone Number
+                    </label>
+                    <div className="flex gap-2">
+                      <select
+                        value={formData.countryCode}
+                        onChange={(e) => setFormData({ ...formData, countryCode: e.target.value })}
+                        className="w-36 px-2.5 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#4ABFAD] focus:border-transparent text-xs font-medium text-slate-800 bg-white transition-all"
+                      >
+                        {COUNTRY_CODES.map((c) => (
+                          <option key={c.code + c.country} value={c.code}>
+                            {c.code} ({c.country})
+                          </option>
+                        ))}
+                      </select>
+                      <input
+                        type="tel"
+                        placeholder="98765 43210"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        className="flex-1 px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#4ABFAD] focus:border-transparent text-slate-900 transition-all text-sm"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Company & Designation */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-semibold text-slate-700 mb-1.5">
+                        Company
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="e.g. Enterprise Ltd"
+                        value={formData.company}
+                        onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#4ABFAD] focus:border-transparent text-slate-900 transition-all text-sm"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-slate-700 mb-1.5">
+                        Designation
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="e.g. Marketing Lead"
+                        value={formData.designation}
+                        onChange={(e) => setFormData({ ...formData, designation: e.target.value })}
+                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#4ABFAD] focus:border-transparent text-slate-900 transition-all text-sm"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Service Interested In */}
+                  <div>
+                    <label className="block text-sm font-semibold text-slate-700 mb-1.5">
+                      Service Interested In
+                    </label>
+                    <select
+                      value={formData.service}
+                      onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#4ABFAD] focus:border-transparent text-sm text-slate-800 bg-white transition-all"
+                    >
+                      <option value="">Select a service...</option>
+                      {SERVICES.map((s) => (
+                        <option key={s} value={s}>
+                          {s}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  {/* Message */}
                   <div>
                     <label className="block text-sm font-semibold text-slate-700 mb-1.5">
                       Message <span className="text-[#4ABFAD]">*</span>
@@ -152,10 +323,9 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    disabled={status === "loading"}
                     className="btn-primary w-full py-3.5 text-base justify-center shadow-lg"
                   >
-                    <span>{status === "loading" ? "Sending..." : "Send Message"}</span>
+                    <span>Send Message</span>
                     <Send className="w-4 h-4" />
                   </button>
                 </form>

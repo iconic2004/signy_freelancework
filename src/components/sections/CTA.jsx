@@ -76,6 +76,7 @@ export default function CTA() {
   return (
     <section
       ref={containerRef}
+      data-cta-section="true"
       className="py-20 md:py-28 bg-white border-t border-slate-100 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
