@@ -37,11 +37,11 @@ export const metadata = {
   },
   icons: {
     icon: [
-      { url: "/images/favicon1.ico" },
-      { url: "/images/favicon1.png", type: "image/png" }
+      { url: "/favicon.ico" },
+      { url: "/favicon.png", type: "image/png" }
     ],
     apple: [
-      { url: "/images/favicon1.png" }
+      { url: "/favicon.png" }
     ]
   },
   openGraph: {
